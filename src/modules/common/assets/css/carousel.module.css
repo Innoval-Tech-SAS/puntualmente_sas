@@ -1,0 +1,22 @@
+.carousel-container {
+    width: 70%; 
+    margin: 0 auto; 
+    background-color: #333; 
+    border-radius: 20px; 
+    overflow: hidden; 
+    padding: 10px;
+  }
+  
+  .carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%px; 
+  }
+  
+  .carousel-logo {
+    height: 50%;
+    max-width: 50%; 
+    object-fit: contain; 
+  }
+  
