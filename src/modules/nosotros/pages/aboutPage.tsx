@@ -4,6 +4,7 @@ import React from 'react';
 import CardFlip from '../components/cardFlip';
 import ColumnInfo from '../components/columnInfo';
 import Section from "../../common/components/section";
+import ClientCarousel from "../../common/components/clientCarousel";
 
 const AboutPage: React.FC = () => {
 
@@ -41,6 +42,9 @@ const AboutPage: React.FC = () => {
                         />
                     ))}
                 </div>
+            </Section>
+            <Section title="Nuestros Clientes" titleColor="black" backgroundColor="white">
+                <ClientCarousel logos={aboutPageConfig.clientLogos} autoPlayInterval={3000} />
             </Section>
         </>
     )
