@@ -1,18 +1,19 @@
 .banner_content {
     position: relative;
-    max-height: 80dvh;
+
 
 }
 
 .reverse_banner_content {
     position: relative;
+    /* overflow: hidden; */
 }
 
 .banner_title {
     width: 631px;
     color: rgba(198, 40, 40, 1);
     position: absolute;
-    top: 434px;
+    top: 234px;
     left: 51px;
     font-family: Manrope;
     font-weight: Bold;
@@ -31,10 +32,10 @@
 }
 
 .banner_text {
-    width: 629px;
+    width: 40%;
     color: rgba(0, 0, 0, 1);
     position: absolute;
-    top: 548px;
+    top: 348px;
     left: 53px;
     font-family: Manrope;
     font-weight: Regular;
@@ -44,12 +45,12 @@
 }
 
 .banner_image {
-    min-width: 45%;
-    min-height: 825px;
+    width: 60%;
+    min-height: 500px;
     opacity: 1;
     position: absolute;
-    top: 219px;
-    left: 740px;
+    top: 115px;
+    left: 650px;
     border-top-left-radius: 29px;
     border-top-right-radius: 29px;
     border-bottom-left-radius: 29px;

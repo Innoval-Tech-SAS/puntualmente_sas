@@ -6,7 +6,7 @@ const Banner: React.FC<BannerProps> = ({ title, textContent, imgSrc, isReverse }
         <div className={isReverse ? bannerStyles.reverse_banner_content : bannerStyles.banner_content}>
             <h1 className={bannerStyles.banner_title}>{title}</h1>
             <span className={bannerStyles.banner_text}>{textContent}</span>
-            <span
+            <div
                 className={bannerStyles.banner_image}
                 style={{
                     backgroundImage: `url(${imgSrc})`,
@@ -15,7 +15,7 @@ const Banner: React.FC<BannerProps> = ({ title, textContent, imgSrc, isReverse }
                     backgroundSize: "cover"
                 }}
             >
-            </span>
+            </div>
         </div>
     );
 }
