@@ -8,7 +8,7 @@ const App: React.FC = () => {
         {siteConfig.pages.map((page) => (
           <Route
             key={page.path}
-            path={page.path}
+            path={`${page.path}`}
             element={<page.page />}
           />
         ))}

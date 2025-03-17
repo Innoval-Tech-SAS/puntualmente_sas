@@ -1,6 +1,8 @@
+import siteConfig from "../../../config/siteConfig";
+
 const homePageConfig = {
     id: "homePage",
-    path: "/",
+    path: "/home",
     title: "Puntualmente SAS",
     banner: {
         bannerTitle: "PUNTUALMENTE S.A.S",
@@ -10,6 +12,10 @@ const homePageConfig = {
         clientes, garantizando el cumplimiento de sus normas y protocolos operativos.`,
         bannerImgSrc: "src/modules/inicio/assets/images/banner_image.png",
         bannerIsReverse: false,
+    },
+    navbar: {
+        navItems: siteConfig.navItems,
+        navButtons: siteConfig.navButtons,
     }
 };
 

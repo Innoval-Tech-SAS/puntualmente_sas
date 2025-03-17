@@ -7,11 +7,42 @@ const siteConfig = {
     description: "",
     pages: [
         {
-            path: "/",
+            path: "/home",
             title: "Puntualmente SAS",
             page: HomePage,
         }
-    ]
+    ],
+    navItems: [
+        {
+            title: "Inicio",
+            url: "/home"
+        },
+
+        {
+            title: "Servicios",
+            url: "/services"
+        },
+        {
+            title: "Nosotros",
+            url: "/About-us"
+        },
+        {
+            title: "Contacto",
+            url: "/contact-us"
+        },
+    ],
+    navButtons: [
+        {
+            title: "Iniciar sesión",
+            url: "/login",
+            type: "link"
+        },
+        {
+            title: "Pagar",
+            url: "/payments",
+            type: "button"
+        }
+    ],
 };
 
 export default siteConfig;
