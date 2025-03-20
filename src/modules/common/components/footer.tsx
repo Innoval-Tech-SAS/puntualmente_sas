@@ -7,7 +7,6 @@ const FooterColumn: React.FC<FooterColumnProps> = ({ title, items }) => {
     return (
         <div className={footerStyles.footer_column}>
             <h3 className={footerStyles.footer_column_title}>{title}</h3>
-
             <ul className={footerStyles.footer_list}>
                 {items.map((item, index) => (
                     <li className={footerStyles.footer_list_item} key={index}>{item}</li>
