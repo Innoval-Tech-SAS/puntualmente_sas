@@ -10,7 +10,7 @@ const homePageConfig = {
         servicios, especializados en Gestión y Recuperación de Cartera, Call y Contact Center.
         Nuestro mayor interés es brindar satisfactoriamente procesos de valor agregado para cada uno de nuestros
         clientes, garantizando el cumplimiento de sus normas y protocolos operativos.`,
-        bannerImgSrc: "src/modules/inicio/assets/images/banner_image.png",
+        bannerImgSrc: "/assets/images/home_banner.png",
         bannerIsReverse: false,
     },
     navbar: {
