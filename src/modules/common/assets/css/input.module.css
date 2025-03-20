@@ -32,7 +32,7 @@
 }
 
 .input_container_invalid .input_label {
-    color: #e74c3c;
+    color: #fff;
 }
 
 .checkbox_wrapper {
@@ -49,13 +49,13 @@
 .error_message {
     display: block;
     margin-top: 0.25rem;
-    color: #e74c3c;
+    color: #fff;
     font-size: 0.8rem;
     font-family: Manrope;
 }
 
 .required_mark {
-    color: #e74c3c;
+    color: #fff;
     margin-left: 0.25rem;
 }
 

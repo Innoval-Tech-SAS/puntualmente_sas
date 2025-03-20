@@ -31,8 +31,11 @@ const FormBase: React.FC<FormBaseProps> = ({ title, children, textContent, onVal
 
     return (
         <div className={formStyles.form_container}>
-            <h3 className={formStyles.form_title}>{title}</h3>
-            {textContent && <p className={formStyles.form_text}>{textContent}</p>}
+            <div className={formStyles.form_header}>
+                <h3 className={formStyles.form_title}>{title}</h3>
+                {textContent && <p className={formStyles.form_text}>{textContent}</p>}
+            </div>
+
             <form className={formStyles.form} onSubmit={handleFormSubmit} noValidate>
                 {React.Children.map(children, (child) => {
                     if (React.isValidElement<InputBaseProps>(child)) {
@@ -59,7 +62,6 @@ const FormBase: React.FC<FormBaseProps> = ({ title, children, textContent, onVal
                     />
                 </div>
                 <div className={formStyles.form_buttons}>
-                    <button className={formStyles.form_button} type="reset">Limpiar</button>
                     <button className={formStyles.form_button} type="submit">Enviar</button>
                 </div>
 

@@ -2,19 +2,7 @@ import React from 'react';
 import FormBase from "../../common/components/formBase";
 import Input from "../../common/components/input";
 
-// const ContactForm: React.FC = () => {
-//     return (
-//         <FormBase title="Contact Form">
-//             <Input type="text" name="test" label="test input" dataType="test" />
-//         </FormBase>
-//     );
-// };
-
-// export default ContactForm;
-
-
-
-const FormExample: React.FC = () => {
+const ContactForm: React.FC = () => {
 
     const handleFormValidation = (action: string, isValid: boolean) => {
         if (action === 'submit') {
@@ -29,8 +17,9 @@ const FormExample: React.FC = () => {
     return (
         <div>
             <FormBase
-                title="Formulario de Registro"
-                textContent="Por favor completa todos los campos requeridos"
+                title=""
+                textContent={`Si quieres sumarte a nuestro equipo y aportar tu talento,\n
+                ¡postúlate ahora y construyamos juntos el futuro de la gestión empresarial!"`}
                 onValidate={handleFormValidation}
             >
                 <Input
@@ -50,17 +39,27 @@ const FormExample: React.FC = () => {
                     dataType="email"
                 />
                 <Input
-                    type="password"
-                    name="password"
-                    label="Contraseña"
+                    type="text"
+                    name="asunto"
+                    label="Asunto"
                     required={true}
-                    dataType="password"
-                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,12}$"
-                    title="Debe tener entre 6 y 12 caracteres, incluir una mayúscula, una minúscula y un número."
+                    dataType="asunto"
+                    pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ]{3,}$"
+                    title="Debe ser una sola palabra con al menos 3 letras."
+                />
+
+                <Input
+                    type="textarea"
+                    name="mensaje"
+                    label="Mensaje"
+                    required={true}
+                    dataType="textarea"
+                    pattern="^.{10,}$"
+                    title="El mensaje debe tener al menos 10 caracteres."
                 />
             </FormBase>
         </div>
     );
 };
 
-export default FormExample;
+export default ContactForm;
