@@ -18,7 +18,7 @@ const Input: React.FC<InputBaseProps> = ({
     const [isValid, setIsValid] = useState<boolean>(true);
     const [touched, setTouched] = useState<boolean>(false);
     const [errorMessage, setErrorMessage] = useState<string>("");
-    const [value, setValue] = useState<string>("");
+
 
     const handleValidation = (e: React.FocusEvent<HTMLInputElement>) => {
         const validationResult = inputValidator(e.target);
@@ -36,7 +36,6 @@ const Input: React.FC<InputBaseProps> = ({
             const validationResult = inputValidator(e.target);
             setIsValid(e.target.validity.valid);
             setErrorMessage(validationResult.message);
-            setValue(e.target.value);
 
             if (onValidate) {
                 onValidate(name, e.target.validity.valid);

@@ -15,14 +15,14 @@ const Banner: React.FC<BannerProps> = ({
           : bannerStyles.banner_container
       }
     >
-      <div className={bannerStyles.banner_wrapper}>
+      <div className={isReverse ? bannerStyles.banner_wrapper_reverse : bannerStyles.banner_wrapper}>
         <div className={bannerStyles.banner_content}>
           <h1 className={bannerStyles.banner_title}>{title}</h1>
           <span className={bannerStyles.banner_text}>{textContent}</span>
         </div>
 
         <div
-          className={bannerStyles.banner_image}
+          className={isReverse ? bannerStyles.banner_image_reverse : bannerStyles.banner_image}
           style={{
             backgroundImage: `url(${imgSrc})`,
             backgroundRepeat: "no-repeat",

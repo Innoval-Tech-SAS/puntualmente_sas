@@ -1,6 +1,8 @@
 import { lazy } from "react";
 
 const HomePage = lazy(() => import("../modules/inicio/pages/homePage"));
+const ServicesPage = lazy(() => import("../modules/servicios/pages/servicesPage"));
+const ContactPage = lazy(() => import("../modules/contacto/pages/contactPage"));
 const AboutPage = lazy(() => import("../modules/nosotros/pages/aboutPage"));
 
 const siteConfig = {
@@ -13,10 +15,20 @@ const siteConfig = {
             page: HomePage,
         },
         {
-            path:"/about",
+            path: "/about-us",
             title: "Puntualmente SAS",
             page: AboutPage,
-        }
+        },
+        {
+            path: "/services",
+            title: "Puntualmente SAS",
+            page: ServicesPage,
+        },
+        {
+            path: "/contact-us",
+            title: "Puntualmente SAS",
+            page: ContactPage,
+        },
     ],
     navItems: [
         {
@@ -30,7 +42,7 @@ const siteConfig = {
         },
         {
             title: "Nosotros",
-            url: "/About-us"
+            url: "/about-us"
         },
         {
             title: "Contacto",
