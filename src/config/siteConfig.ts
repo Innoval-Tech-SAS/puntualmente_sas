@@ -3,7 +3,7 @@ import { lazy } from "react";
 const HomePage = lazy(() => import("../modules/inicio/pages/homePage"));
 const ServicesPage = lazy(() => import("../modules/servicios/pages/servicesPage"));
 const ContactPage = lazy(() => import("../modules/contacto/pages/contactPage"));
-const AboutPage = lazy(() => import("../modules/nosotros/pages/aboutPage"));
+// const AboutPage = lazy(() => import("../modules/nosotros/pages/aboutPage"));
 
 const siteConfig = {
     title: "Puntualmente SAS",
@@ -14,11 +14,11 @@ const siteConfig = {
             title: "Puntualmente SAS",
             page: HomePage,
         },
-        {
-            path: "/about-us",
-            title: "Puntualmente SAS",
-            page: AboutPage,
-        },
+        // {
+        //     path: "/about-us",
+        //     title: "Puntualmente SAS",
+        //     page: AboutPage,
+        // },
         {
             path: "/services",
             title: "Puntualmente SAS",
