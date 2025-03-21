@@ -121,5 +121,6 @@
 .footerBottomText {
     font-family: Manrope;
     font-weight: Regular;
-    font-size: 0.8rem;
+    font-size: .9rem;
+    color: var(--background-color);
 }

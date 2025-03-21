@@ -64,7 +64,7 @@ const Input: React.FC<InputBaseProps> = ({
             data-type={dataType}
             onBlur={handleValidation}
             onChange={handleChange}
-            className={inputStyles.input_checkbox}
+            className={inputStyles.inputField}
           />
           <label htmlFor={name} className={inputStyles.checkboxLabel}>
             {label}
