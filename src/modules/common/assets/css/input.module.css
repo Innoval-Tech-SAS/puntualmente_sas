@@ -10,6 +10,7 @@
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
     font-family: Manrope;
+    color: var(--background-color);
 }
 
 .inputField {
@@ -28,16 +29,16 @@
 
 .inputField:focus {
     outline: none;
-    border-color: #e74c3c;
+    border-color: var(--primary);
     box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
 }
 
 .inputContainerInvalid .inputField {
-    border-color: #e74c3c;
+    border-color: var(--primary);
 }
 
 .inputContainerInvalid .inputLabel {
-    color: #fff;
+    color: var(--background-color);
 }
 
 .checkboxWrapper {
@@ -54,13 +55,15 @@
 .errorMessage {
     display: block;
     margin-top: 0.25rem;
-    color: #fff;
+    border-color: var(--primary);
+    color: var(--background-color);
     font-size: 0.8rem;
     font-family: Manrope;
 }
 
 .requiredMark {
-    color: #fff;
+    border-color: var(--primary);
+    color: var(--background-color);
     margin-left: 0.25rem;
 }
 

@@ -88,7 +88,7 @@
     justify-content: end;
     align-items: center;
     background-color: var(--dark-background-color);
-    color: #fff;
+    border-color: var(--primary);
     padding: 0.5rem 0;
 }
 
