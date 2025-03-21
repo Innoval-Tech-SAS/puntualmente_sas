@@ -8,34 +8,34 @@
 
 
 
-.navbar_content {
+.navbarContent {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.img_container {
+.imgContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem;
 }
 
-.navbar_logo {
+.navbarLogo {
     width: 140px;
     height: auto;
     filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.1));
 }
 
 
-.items_container {
+.itemsContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 
-.navbar_list {
+.navbarList {
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
@@ -43,12 +43,12 @@
 }
 
 
-.navbar_item {
+.navbarItem {
     padding: 10px 0;
 
 }
 
-.navbar_link {
+.navbarLink {
     text-decoration: none;
     color: var(--secondary);
     font-size: 1.2rem;
@@ -58,14 +58,14 @@
     font-family: Manrope;
 }
 
-.button_container {
+.buttonBontainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 }
 
-.navbar_button {
+.navbarButton {
     text-decoration: none;
     padding: 10px 20px;
     background-color: #c62828;
@@ -77,4 +77,5 @@
     cursor: pointer;
     font-family: Manrope;
     margin-left: 3.5rem;
+    color: var(--background-color);
 }
