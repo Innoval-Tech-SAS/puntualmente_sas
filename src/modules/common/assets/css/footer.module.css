@@ -87,7 +87,7 @@
     width: 100%;
     justify-content: end;
     align-items: center;
-    background-color: #951D1D;
+    background-color: var(--dark-background-color);
     color: #fff;
     padding: 0.5rem 0;
 }
@@ -113,8 +113,8 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    background-color: #951D1D;
-    color: #fff;
+    background-color: var(--dark-background-color);
+    color: var(--background-color);
     padding: 0.5rem 0;
 }
 
