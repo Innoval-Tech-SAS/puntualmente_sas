@@ -22,7 +22,7 @@
 
 .logoFooter {
     width: 90%;
-    height: auto;
+    min-height:150px ;
     filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.1));
     padding-top: 2.5rem;
 }

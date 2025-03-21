@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
         <div className={footerStyles.containerLogo}>
           <img
             className={footerStyles.logoFooter}
-            src="/assets/images/logoFooter.png"
+            src="/assets/images/logo_footer.png"
             alt=""
           />
         </div>
