@@ -1,18 +1,18 @@
-.input_container {
+.inputContainer {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin-bottom: 1rem;
 }
 
-.input_label {
+.inputLabel {
     font-weight: 500;
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
     font-family: Manrope;
 }
 
-.input_field {
+.inputField {
     padding: 0.75rem;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -26,32 +26,32 @@
     overflow: auto;
 }
 
-.input_field:focus {
+.inputField:focus {
     outline: none;
     border-color: #e74c3c;
     box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
 }
 
-.input_container_invalid .input_field {
+.inputContainerInvalid .inputField {
     border-color: #e74c3c;
 }
 
-.input_container_invalid .input_label {
+.inputContainerInvalid .inputLabel {
     color: #fff;
 }
 
-.checkbox_wrapper {
+.checkboxWrapper {
     display: flex;
     align-items: center;
 }
 
-.checkbox_label {
+.checkboxLabel {
     margin-left: 0.5rem;
     font-size: 0.9rem;
     font-family: Manrope;
 }
 
-.error_message {
+.errorMessage {
     display: block;
     margin-top: 0.25rem;
     color: #fff;
@@ -59,12 +59,12 @@
     font-family: Manrope;
 }
 
-.required_mark {
+.requiredMark {
     color: #fff;
     margin-left: 0.25rem;
 }
 
-.input_field:disabled {
+.inputField:disabled {
     background-color: #f5f5f5;
     cursor: not-allowed;
 }

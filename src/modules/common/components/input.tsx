@@ -48,13 +48,13 @@ const Input: React.FC<InputBaseProps> = ({
 
   return (
     <div
-      className={`${inputStyles.input_container} ${
-        !isValid && touched ? inputStyles.input_container_invalid : ""
+      className={`${inputStyles.inputContainer} ${
+        !isValid && touched ? inputStyles.inputContainerInvalid : ""
       } 
         ${type === "checkbox" ? inputStyles.checkbox_container : ""}`}
     >
       {type === "checkbox" ? (
-        <div className={inputStyles.checkbox_wrapper}>
+        <div className={inputStyles.checkboxWrapper}>
           <input
             id={name}
             name={name}
@@ -66,13 +66,13 @@ const Input: React.FC<InputBaseProps> = ({
             onChange={handleChange}
             className={inputStyles.input_checkbox}
           />
-          <label htmlFor={name} className={inputStyles.checkbox_label}>
+          <label htmlFor={name} className={inputStyles.checkboxLabel}>
             {label}
           </label>
         </div>
       ) : (
         <>
-          <label htmlFor={name} className={inputStyles.input_label}>
+          <label htmlFor={name} className={inputStyles.inputLabel}>
             {label}
           </label>
           {type === "textarea" ? (
@@ -86,7 +86,7 @@ const Input: React.FC<InputBaseProps> = ({
               data-type={dataType}
               onBlur={handleValidation}
               onChange={handleChange}
-              className={`${inputStyles.input_field} ${inputStyles.resizable}`}
+              className={`${inputStyles.inputField} ${inputStyles.resizable}`}
             />
           ) : (
             <input
@@ -101,14 +101,14 @@ const Input: React.FC<InputBaseProps> = ({
               data-type={dataType}
               onBlur={handleValidation}
               onChange={handleChange}
-              className={inputStyles.input_field}
+              className={inputStyles.inputField}
             />
           )}
         </>
       )}
 
       {!isValid && touched && (
-        <small className={inputStyles.error_message}>{errorMessage}</small>
+        <small className={inputStyles.errorMessage}>{errorMessage}</small>
       )}
     </div>
   );
