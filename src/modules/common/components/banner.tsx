@@ -8,17 +8,17 @@ const BannerText: React.FC<BannerTextProps> = ({
   listItems,
 }) => {
   return (
-    <div className={bannerStyles.banner_content}>
+    <div className={bannerStyles.bannerContent}>
       <div>
-        <h1 className={bannerStyles.banner_title}>{title}</h1>
-        <span className={bannerStyles.banner_text}>{textContent}</span>
+        <h1 className={bannerStyles.bannerTitle}>{title}</h1>
+        <span className={bannerStyles.bannerText}>{textContent}</span>
       </div>
       {listItems && listItems.length > 0 && listText && (
-        <div className={bannerStyles.banner_list_container}>
-          <span className={bannerStyles.banner_text_list}>{listText}</span>
+        <div className={bannerStyles.bannerListContainer}>
+          <span className={bannerStyles.bannerTextList}>{listText}</span>
           <ul className={bannerStyles.banner_list}>
             {listItems.map((item, index) => (
-              <li key={index} className={bannerStyles.banner_list_item}>
+              <li key={index} className={bannerStyles.bannerListItem}>
                 {item}
               </li>
             ))}
@@ -34,15 +34,15 @@ const Banner: React.FC<BannerProps> = ({ content, imgSrc, isReverse }) => {
     <div
       className={
         isReverse
-          ? bannerStyles.reverse_banner_container
-          : bannerStyles.banner_container
+          ? bannerStyles.reverseBannerContainer
+          : bannerStyles.bannerContainer
       }
     >
       <div
         className={
           isReverse
-            ? bannerStyles.banner_wrapper_reverse
-            : bannerStyles.banner_wrapper
+            ? bannerStyles.bannerWrapperReverse
+            : bannerStyles.bannerWrapper
         }
       >
         <BannerText
@@ -55,8 +55,8 @@ const Banner: React.FC<BannerProps> = ({ content, imgSrc, isReverse }) => {
         <div
           className={
             isReverse
-              ? bannerStyles.banner_image_reverse
-              : bannerStyles.banner_image
+              ? bannerStyles.bannerImageReverse
+              : bannerStyles.bannerImage
           }
           style={{
             backgroundImage: `url(${imgSrc})`,
