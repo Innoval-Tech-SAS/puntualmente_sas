@@ -1,6 +1,12 @@
+export interface BannerTextProps {
+  title: string;
+  textContent: string;
+  listText?: string;
+  listItems?: string[];
+}
+
 export default interface BannerProps {
-    title: string;
-    textContent: string;
-    imgSrc: string;
-    isReverse: boolean;
+  content: BannerTextProps;
+  imgSrc: string;
+  isReverse: boolean;
 }

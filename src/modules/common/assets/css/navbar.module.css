@@ -1,6 +1,6 @@
 .navbar {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
+    background-color: var(--background-color);
     position: fixed;
     width: 100%;
     padding: 1.5rem;
@@ -50,7 +50,7 @@
 
 .navbar_link {
     text-decoration: none;
-    color: #000;
+    color: var(--secondary);
     font-size: 1.2rem;
     font-weight: 400;
     text-align: center;

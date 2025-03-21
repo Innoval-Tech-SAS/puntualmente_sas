@@ -1,6 +1,6 @@
 .footer_container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 1.5rem;
     background-color: #951D1D;
@@ -9,7 +9,7 @@
 
 .footer_wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
 }
 
