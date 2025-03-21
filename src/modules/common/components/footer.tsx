@@ -7,7 +7,7 @@ const FooterColumn: React.FC<FooterColumnProps> = ({ title, items }) => {
   return (
     <div className={footerStyles.footerColumn}>
       <h3 className={footerStyles.footerColumnTitle}>{title}</h3>
-      <ul className={footerStyles.footer_list}>
+      <ul className={footerStyles.footerList}>
         {items.map((item, index) => (
           <li className={footerStyles.footerListItem} key={index}>
             {item}
@@ -30,7 +30,7 @@ const ContactInfo: React.FC<ContactInfoProps> = ({
       <div className={footerStyles.contactInfo}>
         <div className={footerStyles.contactInfoColumn}>
           <h4 className={footerStyles.contactTitle}>Sede</h4>
-          <ul className={footerStyles.footer_list}>
+          <ul className={footerStyles.footerList}>
             {offices.map((office, index) => (
               <li className={footerStyles.footerListItem} key={index}>
                 {office}
@@ -41,7 +41,7 @@ const ContactInfo: React.FC<ContactInfoProps> = ({
 
         <div className={footerStyles.contactInfoColumn}>
           <h4 className={footerStyles.contactTitle}>Dirección</h4>
-          <ul className={footerStyles.footer_list}>
+          <ul className={footerStyles.footerList}>
             {addresses.map((address, index) => (
               <li className={footerStyles.footerListItem} key={index}>
                 {address}

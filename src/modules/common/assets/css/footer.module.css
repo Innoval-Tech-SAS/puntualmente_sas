@@ -42,7 +42,7 @@
     padding: 0.5rem 0 2rem 0;
 }
 
-.footer_list {
+.footerList {
     display: flex;
     flex-direction: column;
     justify-content: start;
