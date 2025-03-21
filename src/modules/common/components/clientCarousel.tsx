@@ -18,12 +18,12 @@ const ClienteCarousel: React.FC<CarouselProps> = ({
 
   return (
     <>
-      <div className="carousel-container">
+      <div className="carouselContainer">
         <div className="carousel">
           <img
             src={logos[currentIndex]}
             alt="Client Logo"
-            className="carousel-logo"
+            className="carouselLogo"
           />
         </div>
       </div>

@@ -1,33 +1,33 @@
-.footer_container {
+.footerContainer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 1.5rem;
-    background-color: #951D1D;
-    color: #fff;
+    background-color: var(--dark-background-color);
+    color: var(--background-color);
 }
 
-.footer_wrapper {
+.footerWrapper {
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
 
-.container_logo {
+.containerLogo {
     display: flex;
     justify-content: end;
     align-items: end;
     width: 25%;
 }
 
-.logo_footer {
+.logoFooter {
     width: 90%;
     height: auto;
     filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.1));
     padding-top: 2.5rem;
 }
 
-.footer_column {
+.footerColumn {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -35,7 +35,7 @@
     padding-left: 1.5rem;
 }
 
-.footer_column_title {
+.footerColumnTitle {
     font-family: Manrope;
     font-weight: medium;
     font-size: 1.5rem;
@@ -50,14 +50,14 @@
     list-style: none;
 }
 
-.footer_list_item {
+.footerListItem {
     padding: 0.5rem 0 0 0;
     font-family: Manrope;
     font-weight: Regular;
     font-size: 1rem;
 }
 
-.contact_column {
+.contactColumn {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -65,24 +65,24 @@
     width: 25%;
 }
 
-.contact_info {
+.contactInfo {
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 0 0 0;
 
 }
 
-.contact_title {
+.contactTitle {
     font-family: Manrope;
     font-weight: medium;
     padding-bottom: .5rem;
 }
 
-.contact_info_column {
+.contactInfoColumn {
     padding: 10px;
 }
 
-.footer_bottom_container {
+.footerBottomContainer {
     display: flex;
     width: 100%;
     justify-content: end;
@@ -92,7 +92,7 @@
     padding: 0.5rem 0;
 }
 
-.contact_section {
+.contactSection {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -100,14 +100,14 @@
     width: 100%;
 }
 
-.footer_bottom_column {
+.footerBottomColumn {
     display: flex;
     justify-content: end;
     align-items: center;
     width: 33%;
 }
 
-.footer_bottom {
+.footerBottom {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -118,7 +118,7 @@
     padding: 0.5rem 0;
 }
 
-.footer_bottom_text {
+.footerBottomText {
     font-family: Manrope;
     font-weight: Regular;
     font-size: 0.8rem;

@@ -1,4 +1,4 @@
-.carousel-container {
+.carouselContainer {
     width: 70%; 
     margin: 0 auto; 
     background-color: #333; 
@@ -14,7 +14,7 @@
     height: 50%px; 
   }
   
-  .carousel-logo {
+  .carouselLogo {
     height: 50%;
     max-width: 50%; 
     object-fit: contain; 
