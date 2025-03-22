@@ -14,7 +14,7 @@ const DescriptionCard: React.FC<DescriptionCardProps> = ({
         style={{ 
           backgroundImage: `url(${imgSrc})`,
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "center center",
+          backgroundPosition: "bottom center",
           backgroundSize: "cover",
         
         }}
