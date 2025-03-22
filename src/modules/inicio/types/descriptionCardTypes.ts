@@ -1,4 +1,4 @@
-export default interface DescriptionCard {
+export default interface DescriptionCardProps {
   title: string;
   description: string;
   imgSrc: string;
