@@ -5,9 +5,10 @@ const DescriptionCard: React.FC<DescriptionCardProps> = ({
   title,
   description,
   imgSrc,
+  isReverse
 }) => {
   return (
-    <div className={styles.descriptionCard}>
+    <div className={isReverse ? styles.descriptionCardReverse : styles.descriptionCard }>
       <div
         className={styles.cardImage}
         style={{ backgroundImage: `url(${imgSrc})` }}

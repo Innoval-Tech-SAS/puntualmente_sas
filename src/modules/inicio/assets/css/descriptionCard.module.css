@@ -4,6 +4,13 @@
     justify-content: space-around;
 }
 
+.descriptionCardReverse{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+
 .descriptionTextContainer{
     display: flex;
     flex-direction: column;
