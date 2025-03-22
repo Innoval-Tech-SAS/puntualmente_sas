@@ -6,6 +6,7 @@ import cardFlipConfig from "../config/cardFlipConfig";
 import ColumnInfo from "../components/columnInfo";
 import columnInfoConfig from "../config/columnInfoConfig";
 import RedSection from "../../common/components/redSection";
+import Section from "../../common/components/section";
 import pageStyle from "../assets/css/pages.module.css";
 
 const HomePage: React.FC = () => {
@@ -13,8 +14,7 @@ const HomePage: React.FC = () => {
     <PageWrapper config={aboutPageConfig as PageConfig}>
       <RedSection>
         <div className={pageStyle.cardsContainer}>
-        <span className={pageStyle.title}>Ciclo Funcional
-        </span>
+          <span className={pageStyle.title}>Ciclo Funcional</span>
           <span className={pageStyle.title}>Operativo</span>
           <div className={pageStyle.columnCard}>
             {cardFlipConfig.cardsData.slice(0, 3).map((card, index) => (
@@ -39,16 +39,22 @@ const HomePage: React.FC = () => {
         </div>
       </RedSection>
 
-      <section className="columns-wrapper">
-        {columnInfoConfig.columnData.map((column, index) => (
-          <ColumnInfo
-            key={index}
-            image={column.image}
-            title={column.title}
-            description={column.description}
-          />
-        ))}
-      </section>
+      <Section>
+        <div className={pageStyle.cardsContainer}>
+          <span className={pageStyle.redTitle}>Descripción del</span>
+          <span className={pageStyle.redTitle}>Servicio</span>
+          <div className={pageStyle.colsContainer}>
+            {columnInfoConfig.columnData.map((column, index) => (
+              <ColumnInfo
+                key={index}
+                image={column.image}
+                title={column.title}
+                description={column.description}
+              />
+            ))}
+          </div>
+        </div>
+      </Section>
     </PageWrapper>
   );
 };
