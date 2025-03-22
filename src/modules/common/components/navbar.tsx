@@ -7,7 +7,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems, navButtons }) => {
       <div className={navbarStyles.navbarContent}>
         <div className="">
           <img
-            src="/assets/images/logo_navbar.png  "
+            src="/assets/images/logo/logo_navbar.png  "
             alt=""
             className={navbarStyles.navbarLogo}
           />

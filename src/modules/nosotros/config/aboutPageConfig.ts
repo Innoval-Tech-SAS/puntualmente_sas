@@ -9,7 +9,7 @@ const aboutPageConfig = {
       title: "¿Quiénes somos?",
       textContent: `Contamos con personal altamente Capacitado y comprometido en Ofrecer Soluciones a nuestros Clientes a la medida de sus necesidades.\n Nuestro principal objetivo es obtener la completa satisfacción de cada cliente que atendemos, a través de un trato personalizado. Somos una empresa preocupada por su gente, creemos en la mejora continua y la excelencia de nuestro trabajo, con lo que buscamos aportar al desarrollo de nuestros clientes y así en todo nuestro entorno.`,
     },
-    imgSrc: "/assets/images/about_banner.png",
+    imgSrc: "/assets/images/banner_images/about_banner.png",
     isReverse: false,
   },
   navbar: {
@@ -55,27 +55,27 @@ export default aboutPageConfig;
 //     ],
 //     columnData: [
 //         {
-//             image: "../assets/images/v123_69.png",
+//             image: "../assets/images/banner_images/v123_69.png",
 //             title: "Equipos Productivos",
 //             description: "Somos una empresa de servicios de tecnología de la información, comprometida con la satisfacción de nuestros clientes, a través de la innovación, la calidad y el talento humano."
 //         },
 //         {
-//             image: "../assets/images/v123_69.png",
+//             image: "../assets/images/banner_images/v123_69.png",
 //             title: "Algoritmos",
 //             description: "Ser reconocidos como una empresa líder en el mercado de servicios de tecnología de la información, por la calidad de nuestros servicios y la satisfacción de nuestros clientes."
 //         },
 //         {
-//             image: "../assets/images/v123_69.png",
+//             image: "../assets/images/banner_images/v123_69.png",
 //             title: "Infraestructura",
 //             description: "Nuestros valores son la base de nuestra cultura organizacional y se reflejan en cada uno de nuestros actos. Son la guía que nos permite alcanzar nuestros objetivos y cumplir con nuestra misión y visión."
 //         },
 //         {
-//             image: "../assets/images/v123_69.png",
+//             image: "../assets/images/banner_images/v123_69.png",
 //             title: "Capacitación",
 //             description: "Nuestros valores son la base de nuestra cultura organizacional y se reflejan en cada uno de nuestros actos. Son la guía que nos permite alcanzar nuestros objetivos y cumplir con nuestra misión y visión."
 //         },
 //         {
-//             image: "../assets/images/v123_69.png",
+//             image: "../assets/images/banner_images/v123_69.png",
 //             title: "Centro Creativo",
 //             description: "Nuestros valores son la base de nuestra cultura organizacional y se reflejan en cada uno de nuestros actos. Son la guía que nos permite alcanzar nuestros objetivos y cumplir con nuestra misión y visión."
 //         }
