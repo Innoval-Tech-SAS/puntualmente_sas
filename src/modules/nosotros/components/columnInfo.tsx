@@ -9,13 +9,13 @@ interface ColumnInfoProps {
 
 const ColumnInfo: React.FC<ColumnInfoProps> =({ image, title, description }) => {
     return (
-        <div className="column-layout">
+
           <div className="column">
             <img src={image} className="column-image" />
             <h3 className="column-title">{title}</h3>
             <p className="column-paragraph">{description}</p>
           </div>
-      </div>
+
     );
 };
 

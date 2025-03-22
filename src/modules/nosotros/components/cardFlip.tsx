@@ -1,7 +1,6 @@
 import React from 'react';
 import '../assets/css/cardFlip.css';
 
-
 interface CardFlipProps {
     title: string;
     description: string;

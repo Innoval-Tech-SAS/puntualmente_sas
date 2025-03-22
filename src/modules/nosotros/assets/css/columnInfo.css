@@ -1,9 +1,9 @@
-.column-layout {
+.columns-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 30px; 
     margin: 20px;
-    flex-wrap: wrap; 
+    /* flex-wrap: wrap;  */
   }
   
   .column {
