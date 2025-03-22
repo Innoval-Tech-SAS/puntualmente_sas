@@ -70,7 +70,7 @@
   .cards-wrapper {
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 120px;
     padding: 20px;
     /* background-color: var(--dark-background-color); */
