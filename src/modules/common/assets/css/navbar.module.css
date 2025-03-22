@@ -4,7 +4,7 @@
     position: fixed;
     width: 100%;
     padding: 1.5rem;
-    z-index: 1000; /* Se colocó por motivo de que las card no pasaran por encima del navbar, si genera problema quitar*/
+    z-index: 1000; 
 }
 
 
@@ -69,7 +69,7 @@
 .navbarButton {
     text-decoration: none;
     padding: 10px 20px;
-    background-color: #c62828;
+    background-color: var(--primary);
     border-color: var(--primary);
     border: none;
     border-radius: 25px;
