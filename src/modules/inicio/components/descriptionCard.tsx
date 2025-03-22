@@ -11,11 +11,17 @@ const DescriptionCard: React.FC<DescriptionCardProps> = ({
     <div className={isReverse ? styles.descriptionCardReverse : styles.descriptionCard }>
       <div
         className={styles.cardImage}
-        style={{ backgroundImage: `url(${imgSrc})` }}
+        style={{ 
+          backgroundImage: `url(${imgSrc})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "bottom center",
+          backgroundSize: "cover",
+        
+        }}
       ></div>
       <div className={styles.descriptionTextContainer}>
         <h3 className={styles.descriptionTitle}>{title}</h3>
-        <p className={styles.description_text}>{description}</p>
+        <p className={styles.descriptionText}>{description}</p>
       </div>
     </div>
   );

@@ -2,39 +2,44 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    max-width: 1200px;
+    height: 380px
 }
 
 .descriptionCardReverse{
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
+    max-width: 1200px;
+    height: 380px
 }
 
 
 .descriptionTextContainer{
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: center;
+    justify-content: center;
+    align-items: start;
     width: 60%;
     border-radius: 20px;
     background-color: var(--background-color);
+    padding: 2rem;
 }
 
 .descriptionTitle{
     font-size: 2rem;
     font-weight: bold;
     color: var(--primary);
+    padding: 10px;
+    width: 90%;
 }
 
 .descriptionText{
-    font-size: 1.5rem;
-    color: var(--primary);
+    font-size: 1.2rem;
+    color: var(--secondary);
     padding: 10px;
-    text-align: justify;
-    width: 80%;
-    margin: 10px;
-    border-radius: 20px;
+    width: 90%;
+    margin: 10px;   
     background-color: var(--background-color);
 }
 
