@@ -1,0 +1,7 @@
+.sectionContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    background-color: var(--primary);
+}

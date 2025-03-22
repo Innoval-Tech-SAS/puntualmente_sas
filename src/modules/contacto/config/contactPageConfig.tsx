@@ -16,7 +16,7 @@ const contactPageConfig = {
         "Retos profesionales que impulsarán tu desarrollo.",
       ],
     },
-    imgSrc: "/assets/images/contact_banner.png",
+    imgSrc: "/assets/images/banner_images/contact_banner.png",
     isReverse: true,
   },
   navbar: {

@@ -1,13 +1,20 @@
-import styles from "../assets/css/descriptionCard.module.css"
+import styles from "../assets/css/descriptionCard.module.css";
 import DescriptionCardProps from "../types/descriptionCardTypes";
 
-const DescriptionCard: React.FC<DescriptionCardProps> = ({ title, description, imgSrc }) => {
+const DescriptionCard: React.FC<DescriptionCardProps> = ({
+  title,
+  description,
+  imgSrc,
+  isReverse
+}) => {
   return (
-    <div className={styles.description_card}>
-      <div style={{ backgroundImage: `url(${imgSrc})` }}>
-      </div>
-      <div className={styles.description_text_container}>
-        <h3 className={styles.description_title}>{title}</h3>
+    <div className={isReverse ? styles.descriptionCardReverse : styles.descriptionCard }>
+      <div
+        className={styles.cardImage}
+        style={{ backgroundImage: `url(${imgSrc})` }}
+      ></div>
+      <div className={styles.descriptionTextContainer}>
+        <h3 className={styles.descriptionTitle}>{title}</h3>
         <p className={styles.description_text}>{description}</p>
       </div>
     </div>
