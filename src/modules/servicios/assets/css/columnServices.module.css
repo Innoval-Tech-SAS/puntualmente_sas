@@ -1,0 +1,31 @@
+.columns-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px; 
+    margin: 20px;
+    /* flex-wrap: wrap;  */
+  }
+  
+  .column {
+    flex: 1 1 20%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    box-sizing: border-box; 
+    max-width: 300px; 
+    font-family: Manrope;
+  }
+  
+  .column-image {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    margin-bottom: 15px;
+  }
+  
+  .column-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: rgba(198,40,40,1);
+  }
+  
