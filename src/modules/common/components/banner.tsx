@@ -16,7 +16,7 @@ const BannerText: React.FC<BannerTextProps> = ({
       {listItems && listItems.length > 0 && listText && (
         <div className={bannerStyles.bannerListContainer}>
           <span className={bannerStyles.bannerTextList}>{listText}</span>
-          <ul className={bannerStyles.banner_list}>
+          <ul className={bannerStyles.bannerList}>
             {listItems.map((item, index) => (
               <li key={index} className={bannerStyles.bannerListItem}>
                 {item}
@@ -61,7 +61,7 @@ const Banner: React.FC<BannerProps> = ({ content, imgSrc, isReverse }) => {
           style={{
             backgroundImage: `url(${imgSrc})`,
             backgroundRepeat: "no-repeat",
-            backgroundPosition: "center center",
+            backgroundPosition: "center",
             backgroundSize: "cover",
           }}
         ></div>

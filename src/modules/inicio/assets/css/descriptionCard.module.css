@@ -3,7 +3,9 @@
     flex-direction: row;
     justify-content: space-around;
     max-width: 1200px;
-    height: 380px
+    height: 380px;
+    
+    
 }
 
 .descriptionCardReverse{
@@ -24,6 +26,7 @@
     border-radius: 20px;
     background-color: var(--background-color);
     padding: 2rem;
+    box-shadow: 5px 12px 15px rgba(0, 0, 0, 0.3);
 }
 
 .descriptionTitle{
@@ -46,4 +49,113 @@
 .cardImage{
     width: 40%;
     border-radius: 20px;
+    box-shadow: 5px 12px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 576px) {
+    .descriptionCard{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 400px;
+        height: 280px
+    }
+    
+    .descriptionCardReverse{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        max-width: 400px;
+        height: 280px
+    }
+    
+    
+    .descriptionTextContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: 60%;
+        border-radius: 10px;
+        background-color: var(--background-color);
+        padding: 0rem;
+    }
+    
+    .descriptionTitle{
+        font-size: .9rem;
+        font-weight: bold;
+        text-align: center;
+        color: var(--primary);
+        width: 90%;
+    }
+    
+    .descriptionText{
+        font-size: .7rem;
+        color: var(--secondary);
+        padding: 10px;
+        width: 90%;
+        margin: 10px;   
+        background-color: var(--background-color);
+    }
+    
+    .cardImage{
+        width: 40%;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .descriptionCard{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 520px;
+        height: 280px
+    }
+    
+    .descriptionCardReverse{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        max-width: 520px;
+        height: 300px
+    }
+    
+    
+    .descriptionTextContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: 60%;
+        border-radius: 20px;
+        background-color: var(--background-color);
+        padding: 0rem;
+    }
+    
+    .descriptionTitle{
+        font-size: 1.3rem;
+        font-weight: medium;
+        text-align: center;
+        color: var(--primary);
+        width: 90%;
+    }
+    
+    .descriptionText{
+        font-size: 1rem;
+        color: var(--secondary);
+        padding: 10px;
+        width: 90%;
+        margin: 10px;   
+        background-color: var(--background-color);
+    }
+    
+    .cardImage{
+        width: 40%;
+        border-radius: 20px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  
 }

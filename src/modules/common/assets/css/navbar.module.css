@@ -1,82 +1,132 @@
 .navbar {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: var(--background-color);
-    position: fixed;
-    width: 100%;
-    padding: 1.5rem;
-    z-index: 1000; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: var(--background-color);
+  position: fixed;
+  width: 100%;
+  padding: 1.5rem;
+  z-index: 50;
 }
 
-
-
 .navbarContent {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .imgContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
 }
 
 .navbarLogo {
-    width: 140px;
-    height: auto;
-    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.1));
+  width: 140px;
+  height: auto;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.1));
 }
-
 
 .itemsContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
 
 .navbarList {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-    list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  list-style: none;
 }
 
-
 .navbarItem {
-    padding: 10px 0;
-
+  padding: 10px 0;
 }
 
 .navbarLink {
-    text-decoration: none;
-    color: var(--secondary);
-    font-size: 1.2rem;
-    font-weight: 400;
-    text-align: center;
-    padding-left: 2.5rem;
-    font-family: Manrope;
+  text-decoration: none;
+  color: var(--secondary);
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  padding-left: 2.5rem;
+  font-family: Manrope;
 }
 
 .buttonBontainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbarButton {
-    text-decoration: none;
-    padding: 10px 20px;
-    background-color: var(--primary);
-    border-color: var(--primary);
-    border: none;
-    border-radius: 25px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    cursor: pointer;
-    font-family: Manrope;
-    margin-left: 3.5rem;
-    color: var(--background-color);
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  border-color: var(--primary);
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: Manrope;
+  margin-left: 3.5rem;
+  color: var(--background-color);
+}
+
+
+@media (max-width: 576px) {
+    .itemsContainer {
+    display: none;
+  }
+
+  .navbarLogo{
+    width: 80px;
+    height: auto;
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.1));
+  }
+
+  .buttonBontainer{
+    display: none;
+  }
+}
+
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .itemsContainer {
+    display: none;
+  }
+
+  .navbarLogo{
+    width: 90px;
+    height: auto;
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.1));
+  }
+
+  .buttonBontainer{
+    display: none;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .itemsContainer {
+        display: none;
+    }
+    .buttonBontainer{
+        display: none;
+      }
+}
+
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  body {
+    background-color: lightsalmon;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-color: lightgray;
+  }
 }

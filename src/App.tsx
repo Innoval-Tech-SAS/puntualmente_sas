@@ -1,10 +1,11 @@
 import siteConfig from "./config/siteConfig"
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, Navigate  } from "react-router-dom"
 
 const App: React.FC = () => {
   return (
     <>
       <Routes>
+        <Route path="/" element={<Navigate to={"/home"} replace/>}/>
         {siteConfig.pages.map((page) => (
           <Route
             key={page.path}
