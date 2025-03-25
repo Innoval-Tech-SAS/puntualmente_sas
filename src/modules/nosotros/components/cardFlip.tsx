@@ -19,7 +19,7 @@ const CardFlip: React.FC<CardFlipProps> = ({ title, description, bulletPoints })
                     
                     <ul className={styles.cardList}>
                         {bulletPoints.map((point, index) => (
-                            <li key={index}>{point}</li>
+                            <li className={styles.cardListItem} key={index}>{point}</li>
                         ))}
                     </ul>
                 </div>
