@@ -1,30 +1,35 @@
 const columnServicesConfig = {
 
-    columnData: [
+    servicesData: [
         {
-            image: "/assets/images/about_images/productive_teams.svg",
-            title: "Equipos Productivos",
-            description: "Contamos con experiencia de más de 25 años en selección y preparación de grandes grupos de trabajo."
+            image: "/assets/images/services_images/contact_center.svg",
+            title: "Contact center",
+            sublist: ["Cobranzas", "Localización", "Telemercado"]
         },
         {
-            image: "/assets/images/about_images/algorithms.svg",
-            title: "Algoritmos",
-            description: "Definimos algoritmos de gestión y predictibilidad que son renovados constantemente."
+            image: "/assets/images/services_images/station_rental.svg",
+            title: "Alquiler de estaciones",
+            sublist: ["Áreas exclusivas", "Semana", "Mes", "Año"]
         },
         {
-            image: "/assets/images/about_images/infrastructure.svg",
-            title: "Infraestructura",
-            description: "Contamos con toda la infraestructura de red, servidores, equipos, software y toda la tecnología de punta para mejorar."
+            image: "/assets/images/services_images/call_center.svg",
+            title: "Call center",
+            sublist: ["Cobranzas", "Localización", "Telemercado"]
         },
         {
-            image: "/assets/images/about_images/training.svg",
-            title: "Capacitación",
-            description: "Desarrollo interno de modelos de capacitación y entrenamiento."
+            image: "/assets/images/services_images/technology_services.svg",
+            title: "Servicios de tecnología",
+            sublist: ["Masivos, SMS, Call Blasting, Email", "Soluciones", "Tecnológicas"]
         },
         {
-            image: "/assets/images/about_images/creative_center.svg",
-            title: "Centro Creativo",
-            description: "Nuestra mayor atención, la prestamos en crear constantemente modelos operativos que superen los objetivos de nuestros clientes."
+            image: "/assets/images/services_images/legal_commercial.svg",
+            title: "Comercial jurídica",
+            sublist: ["Procesos Jurídicos", "Seguimiento Procesal", "Gestión Mixta"]
+        },        
+        {
+            image: "/assets/images/services_images/analysis_services.svg",
+            title: "Servicios de análisis",
+            sublist: ["Ciclo de riesgo", "Valoración de cartera", "Big data"]
         }
     ]
 

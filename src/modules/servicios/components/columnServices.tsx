@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/css/columnServices.module.css';
+import '../assets/css/columnServices.css';
 
 interface ColumnServicesProps {
     image: string;
@@ -7,9 +7,8 @@ interface ColumnServicesProps {
     sublist: string[];
 }
 
-const ColumnInfo: React.FC<ColumnServicesProps> =({ image, title, sublist }) => {
+const ColumnServices: React.FC<ColumnServicesProps> =({ image, title, sublist }) => {
     return (
-
           <div className="column">
             <img src={image} className="column-image" />
             <h3 className="column-title">{title}</h3>
@@ -25,4 +24,4 @@ const ColumnInfo: React.FC<ColumnServicesProps> =({ image, title, sublist }) => 
     );
 };
 
-export default ColumnInfo;
+export default ColumnServices;
