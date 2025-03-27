@@ -8,6 +8,8 @@ import ColumnServices from "../components/columnServices";
 import Section from "../../common/components/section";
 import debtRecoveryConfig from "../config/debtRecoveryConfig";
 import DebtRecovery from "../components/debtRecovery";
+import managementGroupConfig from "../config/managementGroupConfig";
+import ManagementGroup from "../components/managementGroup";
 
 
 const ServicesPage: React.FC = () => {
@@ -34,7 +36,7 @@ const ServicesPage: React.FC = () => {
                 <div className={pageStyle.cardsContainer}>
                     <span className={pageStyle.redTitle}>Recuperación de</span>
                     <span className={pageStyle.redTitle}>Cartera</span>
-                    <div className={pageStyle.colsContainer}>
+                    <div className={pageStyle.colsContainer} id={pageStyle.imgContainer}>
                         {debtRecoveryConfig.recoveryData.map((recovery, index) => (
                             <DebtRecovery
                                 key={index}
@@ -49,6 +51,15 @@ const ServicesPage: React.FC = () => {
                 <div className={pageStyle.cardsContainer}>
                     <span className={pageStyle.title}>Gestión Omnicanal</span>
                     <span className={pageStyle.title}>Todos los servicios en una misma compañía</span>
+                    <div className={pageStyle.colsContainer}>
+                        {managementGroupConfig.groupData.map((group, index) => (
+                            <ManagementGroup
+                            key={index}
+                            title={group.title}
+                            description={group.description}
+                            />
+                        ))}
+                    </div>
                 </div>
             </RedSection>
         </PageWrapper>
