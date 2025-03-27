@@ -1,0 +1,14 @@
+.container-group {
+    text-align: center;
+    padding: 1.8rem;    
+    border-radius: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: var(--background-color);
+    box-shadow: 5px 12px 15px rgba(0, 0, 0, 0.4);
+}
+
+.container-title-group{
+    font-size: 2.3em;
+    color: var(--primary);
+}
