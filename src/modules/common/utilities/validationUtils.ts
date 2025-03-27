@@ -1,4 +1,8 @@
 export const errorMessages = {
+    cedula: {
+        valueMissing: "La cedula es obligatoria.",
+        patternMismatch: "Debe contener solo números y tener al menos 6 dígitos."
+    },
     name: {
         valueMissing: "El nombre es obligatorio.",
         patternMismatch: "Digite su nombre y apellido."
