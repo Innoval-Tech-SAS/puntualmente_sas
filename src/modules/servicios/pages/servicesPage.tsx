@@ -10,7 +10,10 @@ import debtRecoveryConfig from "../config/debtRecoveryConfig";
 import DebtRecovery from "../components/debtRecovery";
 import managementGroupConfig from "../config/managementGroupConfig";
 import ManagementGroup from "../components/managementGroup";
-
+import titleGroupConfig from "../config/titleGroupConfig";
+import TitleGroup from "../components/titleGroup";
+import listGroupConfig from "../config/listGroupConfig";
+import ListGroup from "../components/listGroup";
 
 const ServicesPage: React.FC = () => {
 
@@ -54,9 +57,26 @@ const ServicesPage: React.FC = () => {
                     <div className={pageStyle.colsContainer}>
                         {managementGroupConfig.groupData.map((group, index) => (
                             <ManagementGroup
-                            key={index}
-                            title={group.title}
-                            description={group.description}
+                                key={index}
+                                title={group.title}
+                                description={group.description}
+                            />
+                        ))}
+                    </div>
+                    <div className={pageStyle.colsContainer}>
+                        {titleGroupConfig.titleData.map((title, index) => (
+                            <TitleGroup
+                                key={index}
+                                title={title.title}
+                            />
+                        ))}
+                    </div>
+                    <div className={pageStyle.colsContainer}>
+                        {listGroupConfig.listGroupData.map((liGroup, index) => (
+                            <ListGroup
+                                key={index}
+                                title={liGroup.title}
+                                list={liGroup.list}
                             />
                         ))}
                     </div>
