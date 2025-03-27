@@ -19,7 +19,7 @@
     align-items: center;
     width: 100%;  
     padding: 5rem 15rem;
-    gap: 5rem;
+    gap: 2rem;
   }
 
   #imgContainer {
@@ -37,6 +37,8 @@
     width: 100%;
     
   }
+
+  
 
  
   
