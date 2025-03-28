@@ -12,3 +12,10 @@
     font-size: 2.3em;
     color: var(--primary);
 }
+
+@media (max-width: 1200px) {
+    .container-title-group{
+        font-size: 1.5em;
+        color: var(--primary);
+    }
+} 
