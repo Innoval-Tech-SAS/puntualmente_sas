@@ -22,6 +22,8 @@ const ContactAccordion: React.FC<ContactAccordionProps> = ({ contactData }) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
 
+    console.log(activeIndex)
+
     return (
         <div className={styles.container}>
             {contactData.map((contact, index) => {
