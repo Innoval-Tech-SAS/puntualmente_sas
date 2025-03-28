@@ -6,13 +6,15 @@ const settings = {
   slidesToScroll: 1,
   initialSlide: 0,
   autoplay: true,
-  centerMode: false, // Change this to false
+  centerMode: true,
+  centerPadding: "0px",
   variableWidth: false,
   swipeToSlide: true,
   accessibility: true,
   draggable: true,
-  vertical: false, // Ensure this is set to false
-  adaptiveHeight: true, // Optional: helps with height variation
+  vertical: false,
+  adaptiveHeight: true,
+
 };
 
 export default settings;

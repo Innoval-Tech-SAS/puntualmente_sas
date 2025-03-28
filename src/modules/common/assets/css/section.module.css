@@ -1,9 +1,11 @@
 .sectionContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: auto;
     background-color: var(--background-color);
     margin: 0 auto;
-    padding: 5rem 0;
+    padding: 3rem 0;
 }
