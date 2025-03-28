@@ -1,3 +1,4 @@
+import { TiThMenuOutline } from "react-icons/ti";
 import NavbarProps from "../types/navbarTypes";
 import navbarStyles from "../assets/css/navbar.module.css";
 
@@ -45,6 +46,9 @@ const Navbar: React.FC<NavbarProps> = ({ navItems, navButtons }) => {
               </a>
             )
           )}
+        </div>
+        <div className={navbarStyles.menuContainer}>
+          <TiThMenuOutline  size={24}/>
         </div>
       </div>
     </nav>
