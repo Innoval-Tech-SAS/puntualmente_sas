@@ -47,3 +47,11 @@
         width: 270px;
     }
 }
+
+@media (min-width: 1527px) {
+    .container {
+        min-height: 150px;
+        width: 500px;
+    }
+
+}

@@ -43,7 +43,7 @@
       flex-direction: column;
       align-items: center;
       gap: 0,5rem;
-      /* flex-wrap: wrap;  */
+      flex-wrap: wrap; 
     }
 
 
@@ -61,6 +61,10 @@
     }
   }
   
-
+  @media (min-width: 1921px) {
+    #imgContainer {
+      background-image: none;
+    }
+  }
  
   
