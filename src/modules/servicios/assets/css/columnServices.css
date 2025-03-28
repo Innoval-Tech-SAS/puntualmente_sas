@@ -69,3 +69,9 @@
       color: var(--background-color);
   }
 }
+
+@media (min-width: 1623px) {
+  .column {
+    min-width: 700px;
+  }
+}
