@@ -1,24 +1,27 @@
-.cardsContainer{
+.cardsContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 4.5rem auto;
+    margin: 1.5rem auto;
     padding: 3.5rem 0;
     gap: 2rem;
     max-width: 80%;
 
 }
 
-.carouselContainer{
+.locationsContainer {
+    margin: 1.5rem auto;
+    padding: 3.5rem 0;
+}
+
+.carouselContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 90%;
-    margin: 0 auto;
 }
 
-.carouselTitle{
+.carouselTitle {
     font-size: 2.5rem;
     font-weight: 600;
     font-family: Manrope;
@@ -26,11 +29,21 @@
     padding: 2rem 0;
 }
 
-.carouselContent{
+.carouselContent {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-width: 80%;
-    
+
+}
+
+.carouselWrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }

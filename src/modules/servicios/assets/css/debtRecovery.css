@@ -1,0 +1,48 @@
+.row {
+    text-align: left;
+    padding: 5rem;
+    max-width: 600px;
+    height: 200px;
+}
+
+.row-title {
+    font-size: 2.3em;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.row-description {
+    font-size: 1em; 
+    color: var(--secondary);
+}
+
+@media (max-width: 1280px) {
+    .row {
+        text-align: left;
+        padding: 5rem;
+        max-width: 450px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 980px) {
+    .row {
+        text-align: left;
+        padding: 5rem;
+        max-width: 450px;
+        height: 200px;
+
+    }
+}
+
+@media (max-width: 1200px) {
+    .row-title {
+        font-size: 1.5em;
+        
+    }
+    
+    .row-description {
+        font-size: 0.8em; 
+        color: var(--secondary);
+    }
+}

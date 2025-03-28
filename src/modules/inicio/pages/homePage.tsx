@@ -8,9 +8,15 @@ import { PageConfig } from "../../common/types/pageTypes";
 import PageWrapper from "../../common/layouts/pageWrapper";
 import RedSection from "../../common/components/redSection";
 import DescriptionCard from "../components/descriptionCard";
-import CarouselCard from "../components/carouselCard";
+import Locations from "../components/location";
 
 const HomePage: React.FC = () => {
+
+  const cardData = [{
+    imgSrc: "/assets/images/carousel_image_1.jpg",
+    textContent: "10 años de experiencia, miles de conversaciones exitosas, incontables conexiones construidas. ¡Cumplimos 10 años juntos!",
+    alt: "Carousel image 1",
+  }]
   return (
     <PageWrapper config={homePageConfig as PageConfig}>
       <RedSection>
@@ -33,11 +39,13 @@ const HomePage: React.FC = () => {
             <h3 className={styles.carouselTitle}>Lo útimo PUNTUALMENTE</h3>
           </div>
 
-          <div className={styles.carouselContent}>
-            <HomeCarousel settings={settings}>
-              <CarouselCard/>
-            </HomeCarousel>
+          <div className={styles.carouselWrapper}>
+            <HomeCarousel settings={settings} cardData={cardData} />
           </div>
+        </div>
+
+        <div className={styles.locationsContainer}>
+          <Locations />
         </div>
       </Section>
     </PageWrapper>

@@ -1,16 +1,57 @@
-.carouselWrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 100%;
-    margin: 0 auto;   
+.carouselWrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-.itemsContainer{
-    width: 100%;
-    padding: 2rem;
-    margin: 2rem 0;
+.carouselContainer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.carouselCard {
+    max-width: 530px;
+    margin: 0 auto;
+    align-self: center;
+    margin-left: calc(50% - 265px)
+}
+
+
+.arrow {
+    border: 2px solid var(--primary);
+    padding: 1.8rem;
+    border-radius: 50%;
+}
+
+
+
+.text {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+}
+
+.cardImage {
+    border-radius: 60px 60px 0 0;
+    max-width: 100%;
+    height: auto;
+    max-height: 530px;
+}
+
+.cardBody {
+    border-radius: 20px;
+    max-width: 530px;
+}
+
+.cardFooter {
+    background-color: black;
+    color: white;
+    height: 10rem;
+    border-radius: 0 0 60px 60px;
+    padding: .8rem 0;
 }

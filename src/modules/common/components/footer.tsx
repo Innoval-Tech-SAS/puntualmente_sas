@@ -133,7 +133,7 @@ const Footer: React.FC = () => {
             </small>
             <small
               className={footerStyles.footerBottomText}
-            >{`contacto@puntualmente.com`}</small>
+            >{`contacto@puntualmente.com.co`}</small>
           </div>
         </div>
       </div>
