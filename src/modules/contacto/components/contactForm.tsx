@@ -14,11 +14,11 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className={``}>
       <FormBase
         title=""
         textContent={`Si quieres sumarte a nuestro equipo y aportar tu talento,\n
-                ¡postúlate ahora y construyamos juntos el futuro de la gestión empresarial!`}
+          ¡postúlate ahora y construyamos juntos el futuro de la gestión empresarial!`}
         onValidate={handleFormValidation}
       >
         <Input

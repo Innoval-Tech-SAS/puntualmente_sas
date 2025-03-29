@@ -1,3 +1,7 @@
+.footer{
+    overflow: hidden;
+}
+
 .footerContainer {
     display: flex;
     justify-content: space-evenly;
@@ -6,6 +10,7 @@
     background-color: var(--dark-background-color);
     color: var(--background-color);
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .footerWrapper {
@@ -400,7 +405,6 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        padding: .5rem;
         background-color: var(--dark-background-color);
         color: var(--background-color);
         flex-wrap: wrap;

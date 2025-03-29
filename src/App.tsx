@@ -4,16 +4,16 @@ import siteConfig from "./config/siteConfig";
 
 const pageVariants = {
   initial: { opacity: 0, x: "100%" },
-  animate: { opacity: 1, x: "0%", transition: { duration: 0.5, ease: "easeOut" } },
-  exit: { opacity: 0, x: "-100%", transition: { duration: 0.5, ease: "easeIn" } },
+  animate: { opacity: 1, x: "0%", transition: { duration: 0.3, ease: "easeOut" } },
+  exit: { opacity: 0, x: "-100%", transition: { duration: 0.3, ease: "easeIn" } },
 };
 
 const App: React.FC = () => {
   const location = useLocation();
 
   return (
-    <div style={{ position: "relative", width: "100vw", height: "100vh" }}>
-      <AnimatePresence mode="wait">
+    <div style={{ position: "relative", width: "100vw", height: "100%" }}>
+      <AnimatePresence mode="sync">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Navigate to="/home" replace />} />
           {siteConfig.pages.map((page) => (

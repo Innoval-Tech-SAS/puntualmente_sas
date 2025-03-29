@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/css/listGroup.css';
+import styles from '../assets/css/listGroup.module.css';
 
 interface listGroupProps {
     title: string;
@@ -8,9 +8,9 @@ interface listGroupProps {
 
 const listGroup: React.FC<listGroupProps> =({ title, list }) => {
     return (
-        <div className="container-list-group">
-            <h3 className="list-title">{title}</h3>
-            <div className="list-container-group">
+        <div className={styles.containerListGroup}>
+            <h3 className={styles.listTitle}>{title}</h3>
+            <div className={styles.listContainerGroup}>
                 <ul>
                     {list.map((point, index) => (
                         <li key={index}>{point}</li>

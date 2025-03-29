@@ -1,4 +1,4 @@
-.container-list-group {
+.containerListGroup {
     text-align: left;
     padding: 1.8rem;    
     border-radius: 30px;
@@ -8,24 +8,24 @@
     box-shadow: 5px 12px 15px rgba(0, 0, 0, 0.4);
 }
 
-.list-title {
+.listTitle {
     font-size: 2.3em;
     color: var(--primary);
 }
 
-.list-container-group {
+.listContainerGroup {
     color: var(--secondary);
     font-size: 1em;
     padding: 1rem;
 }
 
 @media (max-width: 1200px) {
-    .list-title {
+    .listTitle {
         font-size: 1.5em;
         color: var(--primary);
     }
     
-    .list-container-group {
+    .listContainerGroup {
         font-size: 0.8em; 
         color: var(--secondary);
     }

@@ -49,8 +49,8 @@
 }
 
 .cardFooter {
-    background-color: black;
-    color: white;
+    background-color: var(--secondary);
+    color: var(--background-color);
     height: 10rem;
     border-radius: 0 0 60px 60px;
     padding: .8rem 0;

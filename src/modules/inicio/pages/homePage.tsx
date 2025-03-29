@@ -1,4 +1,5 @@
 import settings from "../config/carousel";
+import Locations from "../components/location";
 import HomeCarousel from "../components/carousel";
 import cardList from "../config/descriptionCards";
 import styles from "../assets/css/page.module.css";
@@ -8,7 +9,9 @@ import { PageConfig } from "../../common/types/pageTypes";
 import PageWrapper from "../../common/layouts/pageWrapper";
 import RedSection from "../../common/components/redSection";
 import DescriptionCard from "../components/descriptionCard";
-import Locations from "../components/location";
+import ClientCarousel from "../../common/components/clientsCarousel";
+import clientSettings from "../../common/utilities/carouselSettings";
+
 
 const HomePage: React.FC = () => {
 
@@ -38,10 +41,16 @@ const HomePage: React.FC = () => {
           <div>
             <h3 className={styles.carouselTitle}>Lo útimo PUNTUALMENTE</h3>
           </div>
+          
 
           <div className={styles.carouselWrapper}>
             <HomeCarousel settings={settings} cardData={cardData} />
           </div>
+        </div>
+
+
+        <div className={styles.clientsContainer}>
+          <ClientCarousel settings={clientSettings}/>
         </div>
 
         <div className={styles.locationsContainer}>

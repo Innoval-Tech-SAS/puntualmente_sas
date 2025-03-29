@@ -1,4 +1,7 @@
+export interface CarouselItemProps {
+    imgSrc: [string, string, string]
+}
+
 export default interface CarouselProps {
-    logos: string[];
-    autoPlayInterval: number;
+    settings: object;
 }

@@ -4,10 +4,10 @@ import { contactData } from "../utils/locationUtils";
 const Locations: React.FC = () => {
   return (
     <div className={styles.container}>
-      <h1 className="">Nuestras ubicaciones</h1>
+      <h1 className={styles.title}>Nuestras ubicaciones</h1>
 
       <div className={styles.locationWrapper}>
-          <ContactAccordion contactData={contactData} />
+        <ContactAccordion contactData={contactData} />
         <div className={styles.mapWrapper}>
           <iframe
             className={styles.map}
