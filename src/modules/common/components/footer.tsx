@@ -2,6 +2,7 @@ import footerStyles from "../assets/css/footer.module.css";
 import { FooterColumnProps, ContactInfoProps } from "../types/footerTypes";
 import { FaInstagram } from "react-icons/fa6";
 import { FiFacebook } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const FooterColumn: React.FC<FooterColumnProps> = ({ title, items }) => {
   return (
@@ -115,9 +116,9 @@ const Footer: React.FC = () => {
               </a>
             </div>
             <div className={footerStyles.footerBottom}>
-              <a className={footerStyles.footerBottomText}>
+              <Link to={"/policies"} className={footerStyles.footerBottomText}>
                 Política de tratamiento de datos
-              </a>
+              </Link>
               <small className={footerStyles.footerBottomText}>
                 Puntualmente S.A.S.
               </small>

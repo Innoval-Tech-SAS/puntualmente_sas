@@ -68,7 +68,7 @@ const FormBase: React.FC<FormBaseProps> = ({
           <Input
             type="checkbox"
             name="terms"
-            label="Acepto los términos y condiciones y la política de tratamiento de datos"
+            label="De acuerdo con la Ley 1581 de 2012 sobre Protección de Datos Personales, autorizo el tratamiento de mis datos conforme a la política de privacidad. Al proporcionar mi información, acepto los términos y condiciones establecidos para su uso y almacenamiento."
             required={true}
             dataType="terms"
           />

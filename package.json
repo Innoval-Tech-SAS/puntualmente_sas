@@ -14,6 +14,7 @@
     "@heroui/image": "^2.2.10",
     "@heroui/system": "^2.4.12",
     "@heroui/theme": "^2.4.12",
+    "@react-pdf-viewer/core": "^3.12.0",
     "framer-motion": "^12.6.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

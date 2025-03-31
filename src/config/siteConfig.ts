@@ -7,6 +7,8 @@ const ServicesPage = lazy(
 const ContactPage = lazy(() => import("../modules/contacto/pages/contactPage"));
 const AboutPage = lazy(() => import("../modules/nosotros/pages/aboutPage"));
 
+const PoliciesPage = lazy(() => import("../modules/policies/pages/policiesPages"));
+
 const siteConfig = {
   title: "Puntualmente SAS",
   description: "",
@@ -30,6 +32,11 @@ const siteConfig = {
       path: "/contact-us",
       title: "Puntualmente SAS",
       page: ContactPage,
+    },
+    {
+      path: "/policies",
+      title: "Puntualmente SAS",
+      page: PoliciesPage,
     },
   ],
   navItems: [
