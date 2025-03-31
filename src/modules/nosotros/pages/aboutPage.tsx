@@ -35,7 +35,7 @@ const HomePage: React.FC = () => {
         <div className={pageStyle.cardsContainer}>
           <span className={pageStyle.redTitle}>Descripción del</span>
           <span className={pageStyle.redTitle}>Servicio</span>
-          <div className={pageStyle.colsContainer}>
+          <div className={pageStyle.rowsContainer}>
             {columnInfoConfig.columnData.map((column, index) => (
               <ColumnInfo
                 key={index}

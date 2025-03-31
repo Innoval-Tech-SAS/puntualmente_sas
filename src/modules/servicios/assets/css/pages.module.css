@@ -1,69 +1,176 @@
-  .title {
-    color: var(--background-color);
-    font-size: 3rem;
-    text-align: center;
-    font-weight: 700;
-  }
-  
-  .redTitle {
-    color: var(--primary);
-    font-size: 3rem;
-    text-align: center;
-    font-weight: 700;
-  }
-  
-  .colsContainer {
+.title {
+  color: var(--background-color);
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.redTitle {
+  color: var(--primary);
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.rowsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 0rem 2.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.rowsContainer > * {
+  width: calc(50% - 8px); 
+  max-width: 650px;
+}
+
+.servicesContainer{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+.servicesContainer > * {
+  width: calc(50% - 8px); 
+  max-width: 750px;
+}
+
+#imgContainer {
+  background-image: url("/assets/images/services_images/background_image.svg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+
+  .rowsContainer {
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0rem .5rem;
+    justify-content: center;
     align-items: center;
-    width: 100%;  
-    padding: 5rem 1rem;
-    gap: 2rem;
   }
 
-  #imgContainer {
-    background-image: url('/assets/images/services_images/background_image.svg');
-    background-size: contain; 
-    background-position: center center; 
-    background-repeat: no-repeat; 
+  .rowsContainer > * {
+    max-width: 500px;
   }
-  
-  .cardsContainer {
+
+  .servicesContainer{
     display: flex;
     flex-direction: column;
+    gap: 10px;
     justify-content: center;
     align-items: center;
     width: 100%;
   }
+  
+  
+  .servicesContainer > * {
+    width: calc(95% - 5px); 
+    max-width: 550px;
+    margin: 1rem 0;
+  }
 
-  @media (max-width: 768px) {
-    .colsContainer {
-      flex-direction: column;
-      align-items: center;
-      gap: 0,5rem;
-      flex-wrap: wrap; 
-    }
+  #imgContainer {
+    background-image: url("");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
 
 
+}
+
+
+
+
+@media (min-width: 576px) and (max-width: 768px) {
+
+  .rowsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0rem .5rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rowsContainer > * {
+    max-width: 750px;
+  }
+
+  .servicesContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
   
-  @media (max-width: 1200px) {
-    .redTitle, .title {
-      font-size: 1.5rem;
-    }
+  
+  .servicesContainer > * {
+    width: calc(95% - 5px); 
+    max-width: 550px;
+    margin: 1rem 0;
   }
 
-  @media (max-width: 980px) {
-    #imgContainer {
-      background-image: none;
-    }
+  #imgContainer {
+    background-image: url("");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
   
-  @media (min-width: 1921px) {
-    #imgContainer {
-      background-image: none;
-    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .servicesContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
- 
   
+  
+  .servicesContainer > * {
+    width: calc(95% - 5px); 
+    max-width: 550px;
+    margin: 1rem 0;
+  }
+    
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    
+}
+
+@media (min-width: 1200px) {
+  /* .rowsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 5rem 1rem;
+    gap: 2rem; 
+  }*/
+}

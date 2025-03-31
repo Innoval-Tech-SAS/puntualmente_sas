@@ -19,11 +19,14 @@ const ServicesPage: React.FC = () => {
 
     return (
         <PageWrapper config={servicesPageConfig as PageConfig}>
+
             <RedSection>
                 <div className={pageStyle.cardsContainer}>
                     <span className={pageStyle.title}>Servicios</span>
                     <span className={pageStyle.title}>Puntualmente</span>
-                    <div className={pageStyle.colsContainer}>
+
+
+                    <div className={pageStyle.servicesContainer}>
                         {columnServicesConfig.servicesData.map((service, index) => (
                             <ColumnServices
                                 key={index}
@@ -33,28 +36,32 @@ const ServicesPage: React.FC = () => {
                             />
                         ))}
                     </div>
+
                 </div>
             </RedSection>
+
             <Section>
                 <div className={pageStyle.cardsContainer}>
                     <span className={pageStyle.redTitle}>Recuperación de</span>
                     <span className={pageStyle.redTitle}>Cartera</span>
-                    <div className={pageStyle.colsContainer} id={pageStyle.imgContainer}>
+                    <div className={pageStyle.rowsContainer} id={pageStyle.imgContainer}>
                         {debtRecoveryConfig.recoveryData.map((recovery, index) => (
                             <DebtRecovery
                                 key={index}
                                 title={recovery.title}
                                 description={recovery.description}
+                                isReverse={recovery.isReverse}
                             />
                         ))}
                     </div>
                 </div>
             </Section>
+
             <RedSection>
                 <div className={pageStyle.cardsContainer}>
                     <span className={pageStyle.title}>Gestión Omnicanal</span>
                     <span className={pageStyle.title}>Todos los servicios en una misma compañía</span>
-                    <div className={pageStyle.colsContainer}>
+                    <div className={pageStyle.rowsContainer}>
                         {managementGroupConfig.groupData.map((group, index) => (
                             <ManagementGroup
                                 key={index}
@@ -63,7 +70,7 @@ const ServicesPage: React.FC = () => {
                             />
                         ))}
                     </div>
-                    <div className={pageStyle.colsContainer}>
+                    <div className={pageStyle.rowsContainer}>
                         {titleGroupConfig.titleData.map((title, index) => (
                             <TitleGroup
                                 key={index}
@@ -71,7 +78,7 @@ const ServicesPage: React.FC = () => {
                             />
                         ))}
                     </div>
-                    <div className={pageStyle.colsContainer}>
+                    <div className={pageStyle.rowsContainer}>
                         {listGroupConfig.listGroupData.map((liGroup, index) => (
                             <ListGroup
                                 key={index}
@@ -82,6 +89,7 @@ const ServicesPage: React.FC = () => {
                     </div>
                 </div>
             </RedSection>
+
         </PageWrapper>
     )
 }

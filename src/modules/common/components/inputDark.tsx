@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { inputValidator } from "../services/inputValidator";
 import InputBaseProps from "../types/inputTypes";
+import { inputValidator } from "../services/inputValidator";
 import inputStyles from "../assets/css/inputDark.module.css";
 
 const Input: React.FC<InputBaseProps> = ({
@@ -43,6 +43,7 @@ const Input: React.FC<InputBaseProps> = ({
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    
   ) => {
     if (touched) {
       validateInput(e.target);

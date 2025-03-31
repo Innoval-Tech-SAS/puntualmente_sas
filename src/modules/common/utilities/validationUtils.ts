@@ -24,11 +24,11 @@ export const errorMessages = {
     },
     celular : {
         valueMissing: "El telefono celular es obligatorio.",
-        patternMismatch: "El telefono celular debe tener al menos 10 caracteres."
+        patternMismatch: "El telefono celular debe tener 10 caracteres."
     },
     payReference: {
         valueMissing: "El número de referencia es obligatorio.",
-        patternMismatch: "Debe contener solo números y tener al menos 6 dígitos."
+        patternMismatch: "Debe contener solo números y tener al menos 10 dígitos."
     },
     valor: {
         valueMissing: "El valor es obligatorio.",

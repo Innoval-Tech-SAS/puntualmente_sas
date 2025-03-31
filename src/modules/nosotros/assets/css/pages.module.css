@@ -5,7 +5,7 @@
   font-weight: 700;
 }
 
-.colsContainer {
+.rowsContainer {
   display: flex;
   justify-content: space-evenly;
   align-items: center;

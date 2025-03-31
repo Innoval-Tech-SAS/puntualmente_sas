@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/css/columnServices.css';
+import styles from '../assets/css/columnServices.module.css';
 import { BsHexagonFill } from "react-icons/bs";
 
 interface ColumnServicesProps {
@@ -10,14 +10,14 @@ interface ColumnServicesProps {
 
 const ColumnServices: React.FC<ColumnServicesProps> =({ image, title, sublist }) => {
     return (
-          <div className="column">
-            <img src={image} className="column-image" />
-            <h3 className="column-title">{title}</h3>
-            <div className="list-container">
+          <div className={styles.column}>
+            <img src={image} className={styles.columnImage} />
+            <h3 className={styles.columnTitle}>{title}</h3>
+            <div className={styles.listContainer}>
                 <ul>
                     {sublist.map((point, index) => (
-                        <li key={index} className='list-item'>
-                            <BsHexagonFill size={25} color='' className='list-icon' />
+                        <li key={index} className={styles.listItem}>
+                            <BsHexagonFill size={20} color='' className={styles.listIcon} />
                             {point}
                         </li>
                     ))}

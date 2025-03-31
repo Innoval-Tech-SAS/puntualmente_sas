@@ -85,8 +85,8 @@ const Navbar: React.FC<NavbarProps> = ({ navItems, navButtons }) => {
                 label="Cédula"
                 required={true}
                 dataType="cedula"
-                pattern="^[0-9]{6,}$"
-                title="Debe contener solo números y tener al menos 6 dígitos."
+                pattern="^[0-9]{6,10}$"
+                title=""
               />
               <Input
                 type="text"
@@ -95,7 +95,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems, navButtons }) => {
                 required={true}
                 dataType="name"
                 pattern="^(?=[A-Za-z]{3,}\s[A-Za-z]{3,}$)([A-Za-z]{3,}\s*){1,}$"
-                title="Digite su nombre y apellido."
+                title=""
               />
             </div>
             <div className={navbarStyles.inputContainer}>
@@ -113,8 +113,8 @@ const Navbar: React.FC<NavbarProps> = ({ navItems, navButtons }) => {
                 label="Teléfono Celular"
                 required={true}
                 dataType="celular"
-                pattern="^[0-9]{10,}$"
-                title="Debe contener solo números y tener al menos 6 dígitos."
+                pattern="^[0-9]{10,10}$"
+                title=""
               />
             </div>
 
@@ -125,8 +125,8 @@ const Navbar: React.FC<NavbarProps> = ({ navItems, navButtons }) => {
               label="Referencia"
               required={true}
               dataType="payReference"
-              pattern="^[0-9]{6,}$"
-              title="Debe contener solo números y tener al menos 6 dígitos."
+              pattern="^[0-9]{10,18}$"
+              title=""
             />
 
             <Input
@@ -135,8 +135,8 @@ const Navbar: React.FC<NavbarProps> = ({ navItems, navButtons }) => {
               label="Valor"
               required={true}
               dataType="valor"
-              pattern="^[0-9]{6,}$"
-              title="Debe contener solo números y tener al menos 6 dígitos."
+              pattern="^[0-9]$"
+              title=""
             />
            </div>
           </FormBase>

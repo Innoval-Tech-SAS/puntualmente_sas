@@ -1,0 +1,92 @@
+.row {
+  padding: 0 5rem;
+}
+
+.rowTitle {
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+  color: var(--primary);
+  padding: 0.5rem;
+}
+
+.rowDescription {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  padding: 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .row {
+    padding: 0 1rem;
+  }
+
+  .rowTitle {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--primary);
+    padding: 0.5rem;
+  }
+
+  .rowDescription {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .row {
+    padding: 0 5rem;
+  }
+
+  .rowTitle {
+    font-size: 2.3em;
+    margin-bottom: 10px;
+    color: var(--primary);
+    padding: 0.5rem;
+  }
+
+  .rowDescription {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .row {
+    padding: 0 5rem;
+  }
+
+  .rowTitle {
+    font-size: 2.3em;
+    margin-bottom: 10px;
+    color: var(--primary);
+    padding: 0.5rem;
+  }
+
+  .rowDescription {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .row {
+    padding: 0 5rem;
+  }
+
+  .rowTitle {
+    font-size: 2.3em;
+    margin-bottom: 10px;
+    color: var(--primary);
+    padding: 0.5rem;
+  }
+
+  .rowDescription {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    padding: 0.5rem;
+  }
+}
