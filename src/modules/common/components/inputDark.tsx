@@ -35,9 +35,11 @@ const Input: React.FC<InputBaseProps> = ({
   const handleValidation = (
     e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setTouched(true);
+    setTouched(true); 
     validateInput(e.target);
   };
+
+
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>

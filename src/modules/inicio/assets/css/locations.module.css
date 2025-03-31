@@ -40,3 +40,127 @@
     width: 100%;
     flex-grow: 1;
 }
+
+@media (max-width: 576px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin: 0 0;
+        
+        
+    }
+
+    .title{
+        color: var(--primary);
+        font-size: 1.8rem;
+        align-self: center;
+        margin-left: 0.9rem;
+    }
+
+    .locationWrapper{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        max-width: 500px;
+        max-height: 450px;
+    }
+
+    .mapWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 30px 30px 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        max-height: 300px;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin: 0 0;
+        
+        
+    }
+
+    .title{
+        color: var(--primary);
+        font-size: 1.8rem;
+        align-self: center;
+        margin-left: 0.9rem;
+    }
+
+    .locationWrapper{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        max-width: 630px;
+        max-height: 550px;
+    }
+
+    .mapWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 30px 30px 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        max-height: 300px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin: 0 0;
+        
+        
+    }
+
+    .title{
+        color: var(--primary);
+        font-size: 1.9rem;
+        align-self: center;
+        margin-left: 0.9rem;
+    }
+
+    .locationWrapper{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        max-width: 760px;
+        max-height: 550px;
+    }
+
+    .mapWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 30px 30px 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        max-height: 300px;
+    }
+}

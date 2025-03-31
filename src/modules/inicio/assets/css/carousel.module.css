@@ -55,3 +55,153 @@
     border-radius: 0 0 60px 60px;
     padding: .8rem 0;
 }
+
+@media (max-width: 576px) {
+    .carouselWrapper {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    
+    .carouselContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0 1rem;
+        width: 100%;
+    }
+    
+    .carouselCard {
+        max-width: 330px;
+        margin: 0 auto;
+        align-self: center;
+        margin-left: calc(50% - 165px)
+    }
+    
+    .text {
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 .7rem;
+        font-size: .9rem;
+    }
+    
+    .cardImage {
+        border-radius: 40px 40px 0 0;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .cardBody {
+        border-radius: 20px;
+    }
+    
+    .cardFooter {
+        background-color: var(--secondary);
+        color: var(--background-color);
+        height: 7rem;
+        border-radius: 0 0 40px 40px;
+        padding: .8rem 0;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .carouselWrapper {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    
+    .carouselContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0 1rem;
+        width: 100%;
+    }
+    
+    .carouselCard {
+        max-width: 380px;
+        margin: 0 auto;
+        align-self: center;
+        margin-left: calc(50% - 190px)
+    }
+    
+    .text {
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 .7rem;
+        font-size: .9rem;
+    }
+    
+    .cardImage {
+        border-radius: 40px 40px 0 0;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .cardBody {
+        border-radius: 20px;
+    }
+    
+    .cardFooter {
+        background-color: var(--secondary);
+        color: var(--background-color);
+        height: 7rem;
+        border-radius: 0 0 40px 40px;
+        padding: .8rem 0;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .carouselWrapper {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    
+    .carouselContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0 1rem;
+        width: 100%;
+    }
+    
+    .carouselCard {
+        max-width: 420px;
+        margin: 0 auto;
+        align-self: center;
+        margin-left: calc(50% - 210px)
+    }
+    
+    .text {
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 .7rem;
+        font-size: .9rem;
+    }
+    
+    .cardImage {
+        border-radius: 40px 40px 0 0;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .cardBody {
+        border-radius: 20px;
+    }
+    
+    .cardFooter {
+        background-color: var(--secondary);
+        color: var(--background-color);
+        height: 7rem;
+        border-radius: 0 0 40px 40px;
+        padding: .8rem 0;
+    }
+}
+
+

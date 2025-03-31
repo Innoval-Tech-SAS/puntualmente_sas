@@ -71,3 +71,128 @@
         color 0.3s ease,
         background-color 0.3s ease;
 }
+
+@media (max-width: 576px) {
+    .container {
+        height: 300px;
+        max-width: 300px;
+        max-height: 450px;
+        border-radius: 30px 0 0 30px;
+        overflow: hidden;
+    }
+
+    .iconContainer {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        gap: 5px;
+        overflow: visible;
+    }
+
+    .title {
+        padding: .5rem;
+        color: var(--background-color);
+        font-size: .9rem;
+    }
+
+    .text{
+        font-size: 12px;
+    }
+
+    .item {
+        height: calc(40% - 1rem);
+        padding: .5rem 0;
+        overflow: hidden;
+        background-color: var(--secondary);
+    }
+
+    .item.active {
+        height: calc(50% - 1rem);
+        background-color: var(--primary);
+        color: var(--background-color);
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .container {
+        height: 300px;
+        max-width: 300px;
+        max-height: 450px;
+        border-radius: 30px 0 0 30px;
+        overflow: hidden;
+    }
+
+    .iconContainer {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        gap: 5px;
+        overflow: visible;
+    }
+
+    .title {
+        padding: .5rem;
+        color: var(--background-color);
+        font-size: .9rem;
+    }
+
+    .text{
+        font-size: 12px;
+    }
+
+    .item {
+        height: calc(40% - 1rem);
+        padding: .5rem 0;
+        overflow: hidden;
+        background-color: var(--secondary);
+    }
+
+    .item.active {
+        height: calc(50% - 1rem);
+        background-color: var(--primary);
+        color: var(--background-color);
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .container {
+        height: 300px;
+        max-width: 300px;
+        max-height: 450px;
+        border-radius: 30px 0 0 30px;
+        overflow: hidden;
+    }
+
+    .iconContainer {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        gap: 5px;
+        overflow: visible;
+    }
+
+    .title {
+        padding: .5rem;
+        color: var(--background-color);
+        font-size: .9rem;
+    }
+
+    .text{
+        font-size: 12px;
+    }
+
+    .item {
+        height: calc(40% - 1rem);
+        padding: .5rem 0;
+        overflow: hidden;
+        background-color: var(--secondary);
+    }
+
+    .item.active {
+        height: calc(50% - 1rem);
+        background-color: var(--primary);
+        color: var(--background-color);
+    }
+}

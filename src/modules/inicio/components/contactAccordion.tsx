@@ -42,8 +42,6 @@ const ContactAccordion: React.FC<ContactAccordionProps> = ({ contactData }) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  console.log(activeIndex);
-
   return (
     <div className={styles.container}>
       {contactData.map((contact, index) => {
@@ -63,11 +61,11 @@ const ContactAccordion: React.FC<ContactAccordionProps> = ({ contactData }) => {
               <div className={styles.content}>
                 <div className={styles.iconContainer}>
                   <LocationIcon />
-                  <p>{contact.address}</p>
+                  <p className={styles.text}>{contact.address}</p>
                 </div>
                 <div className={styles.iconContainer}>
                   <PhoneIcon />
-                  <p>{contact.phone}</p>
+                  <p className={styles.text}>{contact.phone}</p>
                 </div>
               </div>
             )}
