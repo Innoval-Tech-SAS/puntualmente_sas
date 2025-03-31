@@ -90,6 +90,12 @@
 }
 
 
+.inputContainer{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
 .navbarButtonSuccess {
   text-decoration: none;
   padding: 10px 20px;
@@ -183,7 +189,7 @@
   padding: 20px;
   text-align: center;
   width: 90vw;
-  max-width: 650px;
+  max-width: 1000px;
   background-color: var(--primary);
   position: fixed;
   top: 50%;

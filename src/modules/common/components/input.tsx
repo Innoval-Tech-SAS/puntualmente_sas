@@ -13,12 +13,21 @@ const Input: React.FC<InputBaseProps> = ({
   pattern,
   title,
   dataType,
+  width,
   onValidate,
 }) => {
   const [isValid, setIsValid] = useState<boolean>(true);
   const [touched, setTouched] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string>("");
 
+  let customize = {}
+  
+  if(width != undefined){
+    customize = {width: width}
+  }
+
+
+  
   const handleValidation = (
     e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -102,6 +111,9 @@ const Input: React.FC<InputBaseProps> = ({
               onBlur={handleValidation}
               onChange={handleChange}
               className={inputStyles.inputField}
+              
+              style={customize}
+
             />
           )}
         </>

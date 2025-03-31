@@ -52,11 +52,11 @@ const siteConfig = {
     },
   ],
   navButtons: [
-    {
-      title: "Iniciar sesión",
-      url: "/login",
-      type: "link",
-    },
+    // {
+    //   title: "Iniciar sesión",
+    //   url: "/login",
+    //   type: "link",
+    // },
     {
       title: "Pagar",
       url: "/payments",

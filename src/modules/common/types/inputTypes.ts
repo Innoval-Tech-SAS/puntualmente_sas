@@ -7,6 +7,7 @@ export default interface InputBaseProps {
     disabled?: boolean;
     pattern?: string;
     title?: string;
+    width?: "25%" | "50%" | "75%" | "100%"
     dataType: string;
     onValidate?: (name: string, isValid: boolean) => void;
 }
