@@ -48,6 +48,8 @@ const FormBase: React.FC<FormBaseProps> = ({
     }, 3000);
   };
 
+  
+
   const handleFormSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setSubmitError(null);
@@ -94,7 +96,7 @@ const FormBase: React.FC<FormBaseProps> = ({
 
       const response = await controller.create("/payments", dataWithTerms);
 
-      if (response.id) {
+      if (response.id && submitSuccess) {
         resetForm();
         if (onSubmitSuccess) {
           onSubmitSuccess();
@@ -124,11 +126,11 @@ const FormBase: React.FC<FormBaseProps> = ({
         {textContent && <p className={formStyles.formText}>{textContent}</p>}
       </div>
 
-      {submitSuccess && (
+      {/* {submitSuccess && (
         <div className={formStyles.successMessage}>
           ¡Formulario enviado correctamente!
         </div>
-      )}
+      )} */}
 
       <form
         ref={formRef}

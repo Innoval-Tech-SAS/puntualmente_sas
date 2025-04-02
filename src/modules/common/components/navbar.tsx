@@ -81,7 +81,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems, navButtons }) => {
         <div className={``}>
           <FormBase
             title="Bienvenidos al Portal de Pagos"
-            textContent="Por favor diligencie todos los campos y posteriormente será redireccionado al portal de pagos"
+            textContent="Por favor diligencie todos los campos y posteriormente será redireccionado al portal de pagos www.mipagoamigo.com del Banco Caja Social, recuerde buscar el convenio PUNTUALMENTE SAS"
             onSubmitSuccess={handleFormSubmitSuccess}
           >
             <div className={navbarStyles.inputContainer}>
