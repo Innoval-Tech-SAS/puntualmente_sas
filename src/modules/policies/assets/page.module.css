@@ -1,0 +1,14 @@
+ .policiesContainer {
+    width: 70%;
+    height: 90dvh;
+    margin: 0 auto;
+    overflow: auto;
+    
+ }
+ .header {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    /* margin-top: 20px; */
+    margin-left: 30px;
+ }
