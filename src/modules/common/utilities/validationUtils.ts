@@ -28,7 +28,7 @@ export const errorMessages = {
     },
     paymentReference: {
         valueMissing: "El número de referencia es obligatorio.",
-        patternMismatch: "Debe contener solo números y tener al menos 10 dígitos."
+        patternMismatch: "Debe contener solo números y entre 7 y 12 dígitos."
     },
     amount: {
         valueMissing: "El valor es obligatorio.",
