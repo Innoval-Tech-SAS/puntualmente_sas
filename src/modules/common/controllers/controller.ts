@@ -15,8 +15,6 @@ class Controller {
             const API_URL = import.meta.env.VITE_API_BASE_URL;
             const response = await fetch(`${API_URL}${url}`, options);
 
-            console.log("Respuesta del servidor:", response);
-
             if (!response.ok) {
                 const errorText = await response.text();
                 console.error("Error del servidor:", errorText);

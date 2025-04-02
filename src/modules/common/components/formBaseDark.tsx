@@ -13,9 +13,11 @@ const FormBase: React.FC<FormBaseProps> = ({
   children,
   textContent,
   onValidate,
-  onSubmitSuccess, // Añadir esta prop para manejar el cierre del modal
+  onSubmitSuccess,
 }) => {
-  const [fieldValidity, setFieldValidity] = useState<Record<string, boolean>>({});
+  const [fieldValidity, setFieldValidity] = useState<Record<string, boolean>>(
+    {}
+  );
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [submitSuccess, setSubmitSuccess] = useState<boolean>(false);
@@ -33,7 +35,9 @@ const FormBase: React.FC<FormBaseProps> = ({
       formRef.current.reset();
     }
     setFieldValidity({});
-    const termsCheckbox = document.querySelector<HTMLInputElement>('input[name="terms"]');
+    const termsCheckbox = document.querySelector<HTMLInputElement>(
+      'input[name="terms"]'
+    );
     if (termsCheckbox) {
       termsCheckbox.checked = false;
     }
@@ -78,27 +82,36 @@ const FormBase: React.FC<FormBaseProps> = ({
       setIsSubmitting(true);
       const formData = new FormData(e.target as HTMLFormElement);
       const data = Object.fromEntries(formData.entries());
-      const dataWithTerms: { [key: string]: any; amount?: string | number; terms: boolean } = { ...data, terms: isTermsAccepted };
-      console.log("Enviando datos:", dataWithTerms);
+      const dataWithTerms: {
+        [key: string]: any;
+        amount?: string | number;
+        terms: boolean;
+      } = { ...data, terms: isTermsAccepted };
 
       if (dataWithTerms.amount) {
         dataWithTerms.amount = parseFloat(dataWithTerms.amount.toString());
       }
 
       const response = await controller.create("/payments", dataWithTerms);
-      console.log("Respuesta recibida:", response);
-      resetForm();
 
-      // Notificar al componente padre que el envío fue exitoso
-      if (onSubmitSuccess) {
-        onSubmitSuccess();
+      if (response.id) {
+        resetForm();
+        if (onSubmitSuccess) {
+          onSubmitSuccess();
+        }
+        window.open("https://www.mipagoamigo.com/MPA_WebSite/ServicePayments");
+        showResponse(
+          "Éxito",
+          "En breve serás redireccionado al portal de pagos"
+        );
       }
-
-      window.open("https://www.mipagoamigo.com/MPA_WebSite/ServicePayments");
-      showResponse("Éxito", "En breve serás redireccionado al portal de pagos");
     } catch (error) {
       console.error("Error al enviar el formulario:", error);
-      setSubmitError(error instanceof Error ? error.message : "Error desconocido al enviar el formulario");
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : "Error desconocido al enviar el formulario"
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -117,7 +130,12 @@ const FormBase: React.FC<FormBaseProps> = ({
         </div>
       )}
 
-      <form ref={formRef} className={formStyles.form} onSubmit={handleFormSubmit} noValidate>
+      <form
+        ref={formRef}
+        className={formStyles.form}
+        onSubmit={handleFormSubmit}
+        noValidate
+      >
         {React.Children.map(children, (child) => {
           if (React.isValidElement<InputBaseProps>(child)) {
             return React.cloneElement(child, {
@@ -142,9 +160,7 @@ const FormBase: React.FC<FormBaseProps> = ({
         />
 
         {submitError && (
-          <div className={formStyles.errorMessage}>
-            {submitError}
-          </div>
+          <div className={formStyles.errorMessage}>{submitError}</div>
         )}
 
         <div className={formStyles.formButtons}>
