@@ -1,18 +1,25 @@
-import React, { useState, FormEvent } from "react";
+import React, { useState, FormEvent, useRef } from "react";
 import FormBaseProps from "../types/formBaseTypes";
 import formStyles from "../assets/css/darkForm.module.css";
 import InputBaseProps from "../types/inputTypes";
 import Input from "./input";
+
+import controller from "../controllers/controller";
+
+import showResponse from "../utilities/showResponse";
 
 const FormBase: React.FC<FormBaseProps> = ({
   title,
   children,
   textContent,
   onValidate,
+  onSubmitSuccess, // Añadir esta prop para manejar el cierre del modal
 }) => {
-  const [fieldValidity, setFieldValidity] = useState<Record<string, boolean>>(
-    {}
-  );
+  const [fieldValidity, setFieldValidity] = useState<Record<string, boolean>>({});
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [submitSuccess, setSubmitSuccess] = useState<boolean>(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleInputValidation = (name: string, isValid: boolean) => {
     setFieldValidity((prev) => ({
@@ -21,8 +28,27 @@ const FormBase: React.FC<FormBaseProps> = ({
     }));
   };
 
-  const handleFormSubmit = (e: FormEvent) => {
+  const resetForm = () => {
+    if (formRef.current) {
+      formRef.current.reset();
+    }
+    setFieldValidity({});
+    const termsCheckbox = document.querySelector<HTMLInputElement>('input[name="terms"]');
+    if (termsCheckbox) {
+      termsCheckbox.checked = false;
+    }
+    setSubmitError(null);
+    setSubmitSuccess(true);
+    setTimeout(() => {
+      setSubmitSuccess(false);
+    }, 3000);
+  };
+
+  const handleFormSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setSubmitError(null);
+    setSubmitSuccess(false);
+
     const isFormValid = React.Children.toArray(children)
       .filter(
         (child) =>
@@ -33,6 +59,7 @@ const FormBase: React.FC<FormBaseProps> = ({
           React.isValidElement<InputBaseProps>(child) &&
           fieldValidity[child.props.name]
       );
+
     const termsCheckbox = document.querySelector<HTMLInputElement>(
       'input[name="terms"]'
     );
@@ -40,6 +67,40 @@ const FormBase: React.FC<FormBaseProps> = ({
 
     if (onValidate) {
       onValidate("submit", isFormValid && isTermsAccepted);
+    }
+
+    if (!isFormValid || !isTermsAccepted) {
+      console.error("Formulario inválido o términos no aceptados");
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+      const formData = new FormData(e.target as HTMLFormElement);
+      const data = Object.fromEntries(formData.entries());
+      const dataWithTerms: { [key: string]: any; amount?: string | number; terms: boolean } = { ...data, terms: isTermsAccepted };
+      console.log("Enviando datos:", dataWithTerms);
+
+      if (dataWithTerms.amount) {
+        dataWithTerms.amount = parseFloat(dataWithTerms.amount.toString());
+      }
+
+      const response = await controller.create("/payments", dataWithTerms);
+      console.log("Respuesta recibida:", response);
+      resetForm();
+
+      // Notificar al componente padre que el envío fue exitoso
+      if (onSubmitSuccess) {
+        onSubmitSuccess();
+      }
+
+      window.open("https://www.mipagoamigo.com/MPA_WebSite/ServicePayments");
+      showResponse("Éxito", "En breve serás redireccionado al portal de pagos");
+    } catch (error) {
+      console.error("Error al enviar el formulario:", error);
+      setSubmitError(error instanceof Error ? error.message : "Error desconocido al enviar el formulario");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -50,7 +111,13 @@ const FormBase: React.FC<FormBaseProps> = ({
         {textContent && <p className={formStyles.formText}>{textContent}</p>}
       </div>
 
-      <form className={formStyles.form} onSubmit={handleFormSubmit} noValidate>
+      {submitSuccess && (
+        <div className={formStyles.successMessage}>
+          ¡Formulario enviado correctamente!
+        </div>
+      )}
+
+      <form ref={formRef} className={formStyles.form} onSubmit={handleFormSubmit} noValidate>
         {React.Children.map(children, (child) => {
           if (React.isValidElement<InputBaseProps>(child)) {
             return React.cloneElement(child, {
@@ -65,17 +132,28 @@ const FormBase: React.FC<FormBaseProps> = ({
           }
           return null;
         })}
-          <Input
-            type="checkbox"
-            name="terms"
-            label="De acuerdo con la Ley 1581 de 2012 sobre Protección de Datos Personales, autorizo el tratamiento de mis datos conforme a la política de privacidad. Al proporcionar mi información, acepto los términos y condiciones establecidos para su uso y almacenamiento."
-            required={true}
-            dataType="terms"
-          />
-        
+
+        <Input
+          type="checkbox"
+          name="terms"
+          label="De acuerdo con la Ley 1581 de 2012 sobre Protección de Datos Personales, autorizo el tratamiento de mis datos conforme a la política de privacidad. Al proporcionar mi información, acepto los términos y condiciones establecidos para su uso y almacenamiento."
+          required={true}
+          dataType="terms"
+        />
+
+        {submitError && (
+          <div className={formStyles.errorMessage}>
+            {submitError}
+          </div>
+        )}
+
         <div className={formStyles.formButtons}>
-          <button className={formStyles.formButton} type="submit">
-            Enviar
+          <button
+            className={formStyles.formButton}
+            type="submit"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? "Enviando..." : "Enviar"}
           </button>
         </div>
       </form>

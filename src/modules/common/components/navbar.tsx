@@ -15,6 +15,11 @@ const Navbar: React.FC<NavbarProps> = ({ navItems, navButtons }) => {
     }
   };
 
+  const handleFormSubmitSuccess = () => {
+    // Cerrar el modal cuando el formulario se envía con éxito
+    modalRef.current?.close();
+  };
+
   return (
     <nav className={navbarStyles.navbar}>
       <div className={navbarStyles.navbarContent}>
@@ -77,20 +82,21 @@ const Navbar: React.FC<NavbarProps> = ({ navItems, navButtons }) => {
           <FormBase
             title="Bienvenidos al Portal de Pagos"
             textContent="Por favor diligencie todos los campos y posteriormente será redireccionado al portal de pagos"
+            onSubmitSuccess={handleFormSubmitSuccess}
           >
             <div className={navbarStyles.inputContainer}>
               <Input
                 type="text"
-                name="cedula"
+                name="documentNumber"
                 label="Cédula"
                 required={true}
-                dataType="cedula"
+                dataType="documentNumber"
                 pattern="^[0-9]{6,10}$"
                 title=""
               />
               <Input
                 type="text"
-                name="nombre"
+                name="name"
                 label="Nombre"
                 required={true}
                 dataType="name"
@@ -109,36 +115,36 @@ const Navbar: React.FC<NavbarProps> = ({ navItems, navButtons }) => {
 
               <Input
                 type="text"
-                name="celular"
+                name="phone"
                 label="Teléfono Celular"
                 required={true}
-                dataType="celular"
+                dataType="phone"
                 pattern="^[0-9]{10,10}$"
                 title=""
               />
             </div>
 
-           <div className={navbarStyles.inputContainer}>
-           <Input
-              type="text"
-              name="payReference"
-              label="Referencia"
-              required={true}
-              dataType="payReference"
-              pattern="^[0-9]{10,18}$"
-              title=""
-            />
+            <div className={navbarStyles.inputContainer}>
+              <Input
+                type="text"
+                name="paymentReference"
+                label="Referencia"
+                required={true}
+                dataType="paymentReference"
+                pattern="^[0-9]{10,18}$"
+                title=""
+              />
 
-            <Input
-              type="text"
-              name="valor"
-              label="Valor"
-              required={true}
-              dataType="valor"
-              pattern="^[0-9]$"
-              title=""
-            />
-           </div>
+              <Input
+                type="number"
+                name="amount"
+                label="Valor"
+                required={true}
+                dataType="amount"
+                pattern="^[0-9]+(\.[0-9]+)?$"
+                title=""
+              />
+            </div>
           </FormBase>
         </div>
       </dialog>
