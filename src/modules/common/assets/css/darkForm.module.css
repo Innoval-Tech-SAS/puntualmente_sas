@@ -41,7 +41,8 @@
     font-size: 16px;
     font-family: Manrope;
     white-space: pre-line;
-    margin-bottom: 2rem;
+    margin: 2rem;
+    padding: 0 100px;
     color: var(--background-color);
 
 }
