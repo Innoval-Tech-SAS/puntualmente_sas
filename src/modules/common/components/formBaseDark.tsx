@@ -95,8 +95,8 @@ const FormBase: React.FC<FormBaseProps> = ({
       }
 
       const response = await controller.create("/payments", dataWithTerms);
-
-      if (response.id && submitSuccess) {
+      console.log(submitSuccess)
+      if (response.id) {
         resetForm();
         if (onSubmitSuccess) {
           onSubmitSuccess();
