@@ -75,11 +75,11 @@ const FormBase: React.FC<FormBaseProps> = ({
       const response = await controller.create("/contacts", dataWithTerms);
       if (response.id) {
         console.log(submitSuccess);
-        showResponse("success", "Formulario enviado con éxito");
+        showResponse("Éxito", "Formulario enviado con éxito");
         resetForm();
       }
     } catch (e) {
-      showResponse("error", "Ocurrió un error al enviar el formulario", true);
+      showResponse("Error", "Ocurrió un error al enviar el formulario", true);
       console.error(e);
     }
   };
