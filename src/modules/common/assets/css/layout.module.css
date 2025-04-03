@@ -2,7 +2,7 @@
   position: fixed;
   bottom: 4.5rem;
   right: 3.5rem;
-  z-index: 50;
+  z-index: 30;
 }
 
 @media (max-width: 576px) {
@@ -10,7 +10,7 @@
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    z-index: 50;
+    z-index: 30;
   }
 }
 
@@ -19,7 +19,7 @@
     position: fixed;
     bottom: 2.5rem;
     right: 2.5rem;
-    z-index: 50;
+    z-index: 30;
   }
 }
 
@@ -28,7 +28,7 @@
     position: fixed;
     bottom: 2.7rem;
     right: 2.7rem;
-    z-index: 50;
+    z-index: 30;
   }
 }
 
