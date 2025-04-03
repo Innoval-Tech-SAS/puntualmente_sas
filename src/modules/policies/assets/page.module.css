@@ -1,14 +1,71 @@
- .policiesContainer {
-    width: 70%;
+.policiesContainer {
+  width: 75%;
+  height: 90dvh;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.header {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin: 3rem auto;
+}
+
+@media (max-width: 576px) {
+  .policiesContainer {
+    width: 85%;
     height: 90dvh;
     margin: 0 auto;
     overflow: auto;
-    
+  }
+  .header {
+   font-size: 1.9rem;
+   color: var(--primary);
+   margin: 2rem auto;
  }
- .header {
-    font-size: 3rem;
-    color: var(--primary);
-    margin-bottom: 20px;
-    /* margin-top: 20px; */
-    margin-left: 30px;
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .policiesContainer {
+    width: 85%;
+    height: 90dvh;
+    margin: 0 auto;
+    overflow: auto;
+  }
+
+  .header {
+   font-size: 1.9rem;
+   color: var(--primary);
+   margin: 2rem auto;
  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .policiesContainer {
+    width: 90%;
+    height: 90dvh;
+    margin: 0 auto;
+    overflow: auto;
+  }
+
+  .header {
+   font-size: 1.9rem;
+   color: var(--primary);
+   margin: 2rem auto;
+ }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .policiesContainer {
+    width: 90%;
+    height: 90dvh;
+    margin: 0 auto;
+    overflow: auto;
+  }
+
+  .header {
+   font-size: 1.9rem;
+   color: var(--primary);
+   margin: 2rem auto;
+ }
+}

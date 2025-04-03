@@ -23,8 +23,8 @@ const ContactForm: React.FC = () => {
       >
         <Input
           type="text"
-          name="nombre"
-          label="Nombre"
+          name="name"
+          label="Nombre y Apellido"
           required={true}
           dataType="name"
           pattern="^(?=[A-Za-z]{3,}\s[A-Za-z]{3,}$)([A-Za-z]{3,}\s*){1,}$"
@@ -39,11 +39,11 @@ const ContactForm: React.FC = () => {
         />
         <Input
           type="text"
-          name="asunto"
+          name="subject"
           label="Asunto"
           required={true}
-          dataType="asunto"
-          pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ]{3,}$"
+          dataType="subject"
+          pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,}$"
           title="Debe ser una sola palabra con al menos 3 letras."
         />
 
@@ -59,7 +59,7 @@ const ContactForm: React.FC = () => {
 
         <Input
           type="textarea"
-          name="mensaje"
+          name="message"
           label="Mensaje"
           required={true}
           dataType="textarea"

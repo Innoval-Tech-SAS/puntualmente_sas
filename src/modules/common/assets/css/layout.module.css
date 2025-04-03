@@ -1,0 +1,36 @@
+.whatsappContainer {
+  position: fixed;
+  bottom: 4.5rem;
+  right: 3.5rem;
+  z-index: 30;
+}
+
+@media (max-width: 576px) {
+  .whatsappContainer {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 30;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .whatsappContainer {
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    z-index: 30;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .whatsappContainer {
+    position: fixed;
+    bottom: 2.7rem;
+    right: 2.7rem;
+    z-index: 30;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+}

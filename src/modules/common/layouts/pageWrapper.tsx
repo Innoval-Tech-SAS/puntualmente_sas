@@ -3,6 +3,8 @@ import Navbar from "../components/navbar";
 import Banner from "../components/banner";
 import Footer from "../components/footer";
 import PageWrapperProps from "../types/pageTypes";
+import WhatsAppIcon from "../components/whatsAppIcon";
+import styles from "../assets/css/layout.module.css"
 
 const pageVariants = {
   initial: { x: "100%", opacity: 0 },
@@ -38,6 +40,10 @@ const PageWrapper: React.FC<PageWrapperProps> = ({ children, config }) => {
         isReverse={config.banner.isReverse}
       />
       {children}
+      <div className={styles.whatsappContainer}>
+
+        <WhatsAppIcon/>
+      </div>
       <Footer />
     </motion.div>
   );

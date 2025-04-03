@@ -1,0 +1,16 @@
+.whatsappContainer {
+    display: flex;
+    background-color: rgba(var(--success), 0.25);
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--success);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 9999px;
+    box-shadow: 0 15px 15px 5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .whatsappIcon {
+    color: var(--success);
+  }

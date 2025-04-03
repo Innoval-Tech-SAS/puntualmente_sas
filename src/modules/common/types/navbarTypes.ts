@@ -10,3 +10,9 @@ export default interface NavbarProps {
     navItems: NavItems[];
     navButtons: NavItems[];
 }
+
+
+export interface DefaultAsideProps{
+    navItems: NavItems[];
+    navButtons: NavItems[];
+}

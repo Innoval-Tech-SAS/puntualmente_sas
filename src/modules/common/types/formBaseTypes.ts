@@ -6,4 +6,5 @@ export default interface FormBaseProps {
     children: ReactElement<InputBaseProps> | ReactElement<InputBaseProps>[];
     textContent?: string;
     onValidate?: (name: string, isValid: boolean) => void;
+    onSubmitSuccess?: () => void;
 }

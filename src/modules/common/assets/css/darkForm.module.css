@@ -1,70 +1,101 @@
 .formContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    background-color: color-mix(in srgb, var(--secondary) 75%, transparent);
-    border-color: var(--secondary);
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: color-mix(in srgb, var(--secondary) 75%, transparent);
+  border-color: var(--secondary);
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    max-width: 650px;
-    gap: 1rem
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 650px;
+  gap: 1rem;
 }
 
 .formHeader {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .formTitle {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    font-family: Manrope;
-    color: var(--background-color);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: Manrope;
+  color: var(--background-color);
 }
 
 .formText {
-    font-size: 16px;
-    font-family: Manrope;
-    white-space: pre-line;
-    margin-bottom: 2rem;
-    color: var(--background-color);
-
+  font-size: 16px;
+  font-family: Manrope;
+  white-space: pre-line;
+  margin: 2rem;
+  padding: 0 100px;
+  color: var(--background-color);
 }
 
 .formButtons {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .formButton {
-    width: 30%;
-    padding: 10px;
-    margin-top: 20px;
-    font-size: 16px;
-    font-weight: 700;
-    border-color: var(--primary);
-    background-color: var(--secondary);
-    color: var(--background-color);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  width: 30%;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  border-color: var(--primary);
+  background-color: var(--secondary);
+  color: var(--background-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: Manrope;
+}
+
+@media (max-width: 576px) {
+  .formHeader {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+  }
+
+  .formTitle {
+    display: none;
+  }
+
+  .formText {
+    font-size: 0.85rem;
     font-family: Manrope;
+    white-space: pre-line;
+    margin: 0.7rem;
+    padding: 0 100px;
+    color: var(--background-color);
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
 }

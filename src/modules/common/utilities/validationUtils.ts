@@ -1,5 +1,5 @@
 export const errorMessages = {
-    cedula: {
+    documentNumber: {
         valueMissing: "La cedula es obligatoria.",
         patternMismatch: "Debe contener solo números y tener al menos 6 dígitos."
     },
@@ -11,7 +11,7 @@ export const errorMessages = {
         typeMismatch: "El email no es válido.",
         valueMissing: "El email es obligatorio.",
     },
-    asunto: {
+    subject: {
         valueMissing: "El asunto es obligatorio.",
         patternMismatch: "Digite un asunto válido."
     },
@@ -22,15 +22,15 @@ export const errorMessages = {
         valueMissing: "El mensaje es obligatorio.",
         patternMismatch: "El mensaje debe tener al menos 10 caracteres."
     },
-    celular : {
+    phone: {
         valueMissing: "El telefono celular es obligatorio.",
         patternMismatch: "El telefono celular debe tener 10 caracteres."
     },
-    payReference: {
+    paymentReference: {
         valueMissing: "El número de referencia es obligatorio.",
-        patternMismatch: "Debe contener solo números y tener al menos 10 dígitos."
+        patternMismatch: "Debe contener solo números y entre 7 y 12 dígitos."
     },
-    valor: {
+    amount: {
         valueMissing: "El valor es obligatorio.",
         patternMismatch: "Debe ingresar un valor válido."
     }

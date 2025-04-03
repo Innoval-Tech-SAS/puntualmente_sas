@@ -20,6 +20,7 @@ export const inputValidator = (
   input: HTMLInputElement | HTMLTextAreaElement
 ): { isValid: boolean; message: string } => {
   const inputType = input.dataset.type;
+  console.log(input.validity);
   if (input.validity.valid) {
     return { isValid: true, message: "" };
   }
