@@ -11,7 +11,7 @@ export const errorMessages = {
         typeMismatch: "El email no es válido.",
         valueMissing: "El email es obligatorio.",
     },
-    asunto: {
+    subject: {
         valueMissing: "El asunto es obligatorio.",
         patternMismatch: "Digite un asunto válido."
     },

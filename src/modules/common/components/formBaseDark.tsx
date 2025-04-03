@@ -1,12 +1,11 @@
 import React, { useState, FormEvent, useRef } from "react";
-import FormBaseProps from "../types/formBaseTypes";
-import formStyles from "../assets/css/darkForm.module.css";
-import InputBaseProps from "../types/inputTypes";
+
 import Input from "./input";
-
+import InputBaseProps from "../types/inputTypes";
+import FormBaseProps from "../types/formBaseTypes";
 import controller from "../controllers/controller";
-
 import showResponse from "../utilities/showResponse";
+import formStyles from "../assets/css/darkForm.module.css";
 
 const FormBase: React.FC<FormBaseProps> = ({
   title,
