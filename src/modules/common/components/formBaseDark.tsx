@@ -100,7 +100,7 @@ const FormBase: React.FC<FormBaseProps> = ({
         if (onSubmitSuccess) {
           onSubmitSuccess();
         }
-        window.open("https://www.mipagoamigo.com/MPA_WebSite/ServicePayments");
+        window.open("https://portalpagos.davivienda.com/#/comercio/10924/PUNTUALMENTE");
         showResponse(
           "Éxito",
           "En breve serás redireccionado al portal de pagos"
