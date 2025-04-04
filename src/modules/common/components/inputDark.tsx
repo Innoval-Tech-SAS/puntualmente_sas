@@ -20,7 +20,6 @@ const Input: React.FC<InputBaseProps> = ({
   const [touched, setTouched] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string>("");
 
-
   const customize = width ? { width: width } : {};
 
   const validateInput = (target: HTMLInputElement | HTMLTextAreaElement) => {
@@ -35,15 +34,12 @@ const Input: React.FC<InputBaseProps> = ({
   const handleValidation = (
     e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setTouched(true); 
+    setTouched(true);
     validateInput(e.target);
   };
 
-
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    
   ) => {
     if (touched) {
       validateInput(e.target);
@@ -57,11 +53,7 @@ const Input: React.FC<InputBaseProps> = ({
   }, [isValid, touched]);
 
   return (
-    <div
-      className={`${inputStyles.inputContainer} ${
-        !isValid && touched ? inputStyles.inputContainerInvalid : ""
-      }`}
-    >
+    <>
       {type === "checkbox" ? (
         <div
           className={`${inputStyles.checkboxContainer} ${
@@ -89,7 +81,11 @@ const Input: React.FC<InputBaseProps> = ({
           )}
         </div>
       ) : (
-        <>
+        <div
+          className={`${inputStyles.inputContainer} ${
+            !isValid && touched ? inputStyles.inputContainerInvalid : ""
+          }`}
+        >
           <label htmlFor={name} className={inputStyles.inputLabel}>
             {label}
             {required && <span className={inputStyles.requiredMark}>*</span>}
@@ -128,9 +124,9 @@ const Input: React.FC<InputBaseProps> = ({
           {!isValid && touched && (
             <small className={inputStyles.errorMessage}>{errorMessage}</small>
           )}
-        </>
+        </div>
       )}
-    </div>
+    </>
   );
 };
 

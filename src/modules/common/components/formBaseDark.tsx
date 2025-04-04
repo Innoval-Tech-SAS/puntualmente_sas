@@ -1,6 +1,6 @@
 import React, { useState, FormEvent, useRef } from "react";
 
-import Input from "./input";
+import Input from "./inputDark";
 import InputBaseProps from "../types/inputTypes";
 import FormBaseProps from "../types/formBaseTypes";
 import controller from "../controllers/controller";
@@ -47,7 +47,7 @@ const FormBase: React.FC<FormBaseProps> = ({
     }, 3000);
   };
 
-  
+
 
   const handleFormSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -155,7 +155,10 @@ const FormBase: React.FC<FormBaseProps> = ({
         <Input
           type="checkbox"
           name="terms"
-          label="De acuerdo con la Ley 1581 de 2012 sobre Protección de Datos Personales, autorizo el tratamiento de mis datos conforme a la política de privacidad. Al proporcionar mi información, acepto los términos y condiciones establecidos para su uso y almacenamiento."
+          label={
+            `De acuerdo con la Ley 1581 de 2012 sobre Protección de Datos Personales, autorizo el tratamiento de mis datos conforme a la política de privacidad.
+            Al proporcionar mi información, acepto los términos y condiciones establecidos para su uso y almacenamiento`
+          }
           required={true}
           dataType="terms"
         />

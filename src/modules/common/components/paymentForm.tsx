@@ -10,7 +10,7 @@ const PaymentForm: React.FC<PaymentFormProps> = ({handleFormSubmitSuccess}) =>{
     return (
         <FormBase
         title="Bienvenidos al Portal de Pagos"
-        textContent="Por favor diligencie todos los campos y posteriormente será redireccionado al portal de pagos www.mipagoamigo.com del Banco Caja Social, recuerde buscar el convenio PUNTUALMENTE SAS"
+        textContent="Por favor diligencie todos los campos y posteriormente será redireccionado a portalpagos.davivienda.com del Banco Davivienda, recuerde buscar el convenio PUNTUALMENTE SAS"
         onSubmitSuccess={handleFormSubmitSuccess}
       >
         <div className={navbarStyles.inputContainer}>
