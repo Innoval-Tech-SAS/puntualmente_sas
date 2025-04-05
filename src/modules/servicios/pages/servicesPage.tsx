@@ -70,7 +70,7 @@ const ServicesPage: React.FC = () => {
                             />
                         ))}
                     </div>
-                    <div className={pageStyle.rowsContainer}>
+                    <div className={pageStyle.titleGroupContainer}>
                         {titleGroupConfig.titleData.map((title, index) => (
                             <TitleGroup
                                 key={index}

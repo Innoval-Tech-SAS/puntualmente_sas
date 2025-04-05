@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/css/titleGroup.css';
+import '../assets/css/titleGroup.module.css';
 
 interface titleGroupProps {
     title: string;
@@ -7,8 +7,8 @@ interface titleGroupProps {
 
 const titleGroup: React.FC<titleGroupProps> =({ title }) => {
     return (
-        <div className="container-group">
-            <h3 className="container-title-group">{title}</h3>
+        <div className="container-title">
+            <h3>{title}</h3>
         </div>
     );
 };
