@@ -30,10 +30,10 @@
 .servicesContainer{
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 10px;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 80%;
 }
 
 
@@ -54,6 +54,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-right: 1rem;
   width: 100%;
 }
 
