@@ -8,6 +8,8 @@ import columnInfoConfig from "../config/columnInfoConfig";
 import RedSection from "../../common/components/redSection";
 import Section from "../../common/components/section";
 import pageStyle from "../assets/css/pages.module.css";
+import ClientCarousel from "../../common/components/clientsCarousel";
+import clientSettings from "../../common/utilities/carouselSettings";
 
 const HomePage: React.FC = () => {
   return (
@@ -45,6 +47,11 @@ const HomePage: React.FC = () => {
               />
             ))}
           </div>
+        </div>
+      </Section>
+      <Section>
+        <div className={pageStyle.clientsContainer}>
+          <ClientCarousel settings={clientSettings}/>
         </div>
       </Section>
     </PageWrapper>
