@@ -41,9 +41,9 @@ const PageWrapper: React.FC<PageWrapperProps> = ({ children, config }) => {
       />
       {children}
       <div className={styles.whatsappContainer}>
-
         <WhatsAppIcon/>
       </div>
+
       <Footer />
     </motion.div>
   );
