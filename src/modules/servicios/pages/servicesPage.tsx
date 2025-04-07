@@ -24,8 +24,6 @@ const ServicesPage: React.FC = () => {
                 <div className={pageStyle.cardsContainer}>
                     <span className={pageStyle.title}>Servicios</span>
                     <span className={pageStyle.title}>Puntualmente</span>
-
-
                     <div className={pageStyle.servicesContainer}>
                         {columnServicesConfig.servicesData.map((service, index) => (
                             <ColumnServices
@@ -61,7 +59,7 @@ const ServicesPage: React.FC = () => {
                 <div className={pageStyle.cardsContainer}>
                     <span className={pageStyle.title}>Gestión Omnicanal</span>
                     <span className={pageStyle.title}>Todos los servicios en una misma compañía</span>
-                    <div className={pageStyle.rowsContainer}>
+                    <div className={pageStyle.managementGroupContainer}>
                         {managementGroupConfig.groupData.map((group, index) => (
                             <ManagementGroup
                                 key={index}
@@ -78,7 +76,7 @@ const ServicesPage: React.FC = () => {
                             />
                         ))}
                     </div>
-                    <div className={pageStyle.rowsContainer}>
+                    <div className={pageStyle.listGroupContainer}>
                         {listGroupConfig.listGroupData.map((liGroup, index) => (
                             <ListGroup
                                 key={index}

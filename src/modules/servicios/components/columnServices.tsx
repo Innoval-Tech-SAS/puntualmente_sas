@@ -11,7 +11,7 @@ interface ColumnServicesProps {
 const ColumnServices: React.FC<ColumnServicesProps> =({ image, title, sublist }) => {
     return (
           <div className={styles.column}>
-            <img src={image} className={styles.columnImage} />
+            <img alt='' src={image} className={styles.columnImage} />
             <h3 className={styles.columnTitle}>{title}</h3>
             <div className={styles.listContainer}>
                 <ul>

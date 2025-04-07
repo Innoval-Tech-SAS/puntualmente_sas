@@ -1,32 +1,76 @@
-.containerListGroup {
-    text-align: left;
-    padding: 1.8rem;    
-    border-radius: 30px;
-    box-sizing: border-box;
-    max-width: 700px;
-    background-color: var(--background-color);
-    box-shadow: 5px 12px 15px rgba(0, 0, 0, 0.4);
-}
-
 .listTitle {
-    font-size: 2.3em;
+    font-size: 2.3rem;
     color: var(--primary);
 }
 
-.listContainerGroup {
+.listContainer {
     color: var(--secondary);
-    font-size: 1em;
+    font-size: 0.9rem;
     padding: 1rem;
 }
+ 
 
-@media (max-width: 1200px) {
+@media (max-width: 576px) {
     .listTitle {
-        font-size: 1.5em;
+        font-size: 1.3rem;
         color: var(--primary);
     }
     
-    .listContainerGroup {
-        font-size: 0.8em; 
+    .listContainer {
         color: var(--secondary);
+        font-size: 0.9rem;
+        padding: 1.2rem;
     }
-} 
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .listTitle {
+        font-size: 1.5rem;
+        color: var(--primary);
+    }
+    
+    .listContainer {
+        color: var(--secondary);
+        font-size: 0.9rem;
+        padding: 1.2rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .listTitle {
+        font-size: 1.5rem;
+        color: var(--primary);
+    }
+    
+    .listContainer {
+        color: var(--secondary);
+        font-size: 0.9rem;
+        padding: 1.2rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .listTitle {
+        font-size: 1.6rem;
+        color: var(--primary);
+    }
+    
+    .listContainer {
+        color: var(--secondary);
+        font-size: 0.9rem;
+        padding: 1.2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .listTitle {
+        font-size: 2.3rem;
+        color: var(--primary);
+    }
+    
+    .listContainer {
+        color: var(--secondary);
+        font-size: 0.9rem;
+        padding: 1.3rem;
+    }
+}

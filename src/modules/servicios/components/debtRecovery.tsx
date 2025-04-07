@@ -7,9 +7,9 @@ interface debtRecoveryProps {
     isReverse: boolean;
 }
 
-const debtRecovery: React.FC<debtRecoveryProps> =({ title, description }) => {
+const debtRecovery: React.FC<debtRecoveryProps> =({ title, description, isReverse}) => {
     return (
-        <div className={styles.row}>
+        <div className={`${styles.row} ${isReverse ? styles.reverse : ''}`}>
             <h3 className={styles.rowTitle}>{title}</h3>
             <p className={styles.rowDescription}>{description}</p>
         </div>

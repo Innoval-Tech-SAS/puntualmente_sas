@@ -8,9 +8,9 @@ interface listGroupProps {
 
 const listGroup: React.FC<listGroupProps> =({ title, list }) => {
     return (
-        <div className={styles.containerListGroup}>
+        <div>
             <h3 className={styles.listTitle}>{title}</h3>
-            <div className={styles.listContainerGroup}>
+            <div className={styles.listContainer}>
                 <ul>
                     {list.map((point, index) => (
                         <li key={index}>{point}</li>

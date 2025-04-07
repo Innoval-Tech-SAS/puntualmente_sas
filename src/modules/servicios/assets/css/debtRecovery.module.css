@@ -18,6 +18,12 @@
 @media (max-width: 576px) {
   .row {
     padding: 0 1rem;
+    margin-top: 6rem;
+  }
+
+  .reverse {
+    margin-bottom: 6rem;
+    margin-top: 0;
   }
 
   .rowTitle {
@@ -36,11 +42,17 @@
 
 @media (min-width: 576px) and (max-width: 768px) {
   .row {
-    padding: 0 5rem;
+    padding: 0 1rem;
+    margin-top: 6rem;
+  }
+
+  .reverse {
+    margin-bottom: 6rem;
+    margin-top: 0;
   }
 
   .rowTitle {
-    font-size: 2.3em;
+    font-size: 1.5rem;
     margin-bottom: 10px;
     color: var(--primary);
     padding: 0.5rem;
@@ -55,11 +67,17 @@
 
 @media (min-width: 768px) and (max-width: 992px) {
   .row {
-    padding: 0 5rem;
+    padding: 0 1rem;
+    margin-top: 6rem;
+  }
+
+  .reverse {
+    margin-bottom: 6rem;
+    margin-top: 0;
   }
 
   .rowTitle {
-    font-size: 2.3em;
+    font-size: 1.5rem;
     margin-bottom: 10px;
     color: var(--primary);
     padding: 0.5rem;
@@ -75,10 +93,41 @@
 @media (min-width: 992px) and (max-width: 1200px) {
   .row {
     padding: 0 5rem;
+    margin-top: 6rem;
+  }
+
+  .reverse {
+    margin-bottom: 6rem;
+    margin-top: 0;
   }
 
   .rowTitle {
-    font-size: 2.3em;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: var(--primary);
+    padding: 0.5rem;
+  }
+
+  .rowDescription {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .row {
+    padding: 0 7rem;
+    margin-top: 6rem;
+  }
+
+  .reverse {
+    margin-bottom: 6rem;
+    margin-top: 0;
+  }
+
+  .rowTitle {
+    font-size: 2.3rem;
     margin-bottom: 10px;
     color: var(--primary);
     padding: 0.5rem;

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/css/managementGroup.css';
+import styles from '../assets/css/managementGroup.module.css';
 
 interface managementGroupProps {
     title: string;
@@ -8,9 +8,9 @@ interface managementGroupProps {
 
 const managementGroup: React.FC<managementGroupProps> =({ title, description }) => {
     return (
-        <div className="container">
-            <h3 className="container-title">{title}</h3>
-            <p className="container-description">{description}</p>
+        <div className={styles.managementContainer}>
+            <h3 className={styles.managementTitle}>{title}</h3>
+            <p className={styles.managementDescription}>{description}</p>
         </div>
     );
 };
