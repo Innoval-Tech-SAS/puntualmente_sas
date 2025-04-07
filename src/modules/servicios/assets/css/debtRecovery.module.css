@@ -16,7 +16,7 @@
 }
 
 @media (max-width: 576px) {
-  .row {
+  /* .row {
     padding: 0 1rem;
     margin-top: 6rem;
   }
@@ -24,6 +24,10 @@
   .reverse {
     margin-bottom: 6rem;
     margin-top: 0;
+  } */
+
+  .row {
+    padding: 0.5rem 0.5rem;
   }
 
   .rowTitle {
