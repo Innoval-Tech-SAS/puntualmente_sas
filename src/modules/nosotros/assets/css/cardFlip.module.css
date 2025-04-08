@@ -80,24 +80,99 @@
   font-size: 0.8rem;
 } */
 
-@media (max-width: 576px) {
+@media (max-width: 300px){
   .card {
-    width: 100%;
+    width: 80%;
     perspective: 1000px;
   }
   
   .cardInner {
     position: relative;
     width: 100%;
-    /* min-height: 500px; */
     transform-style: preserve-3d;
     transition: transform 0.6s;
-    /* transform-origin: center; */
-    /* padding: 2rem 0; */
+    min-height: 350px;
+    min-width: 150px;
+  }
+  
+  .card:hover .cardInner {
+    transform: rotateY(180deg);
+  }
+  
+  .cardFront,
+  .cardBack {
+    position: absolute;
+    width: 100%;
     height: 100%;
-    min-height: 300px;
-    /* min-width: 150px; */
+    backface-visibility: hidden;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    border-radius: 20px;
+    box-shadow: 5px 12px 15px rgba(0, 0, 0, 0.3);
     padding: 1rem 1rem;
+    text-align: left;
+  }
+  
+  .cardFront {
+    background-color: var(--background-color);
+    color: #333;
+  }
+  
+  .cardBack {
+    background-color: #333;
+    border-color: var(--primary);
+    transform: rotateY(180deg);
+    color: #f1f1f1;
+  }
+  
+  .cardTitle {
+    font-size: 1.1rem;
+    padding: 1rem 0rem;
+  }
+  
+  .cardText {
+    font-size: 0.7rem;
+    font-weight: bold;
+    line-height: 1.5;
+    color: var(--text-color);
+    padding-bottom: 2rem;
+  }
+  .cardBack ul {
+    list-style-type: disc;
+    padding-left: 0.5rem;
+    text-align: left;
+  }
+  
+  .cardList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+  }
+  
+  
+  .cardListItem{
+    font-size: 0.58rem;
+  }
+}
+
+
+@media (min-width: 300px) and (max-width: 576px) {
+  .card {
+    width: 80%;
+    perspective: 1000px;
+  }
+  
+  .cardInner {
+    position: relative;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    min-height: 350px;
+    min-width: 150px;
     justify-content: center;
   }
   
@@ -111,21 +186,18 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    /* display: flex; */
     flex-direction: column;
-    /* justify-content: left; */
-    /* align-items: left; */
+    justify-content: left;
+    align-items: left;
     border-radius: 20px;
     box-shadow: 5px 12px 15px rgba(0, 0, 0, 0.3);
-    /* padding: 20px; */
+    padding: 1.5rem 1.5rem;
     text-align: left;
-    /* height: 100%; */
   }
   
   .cardFront {
     background-color: var(--background-color);
     color: #333;
-    /* padding: 1.5rem; */
   }
   
   .cardBack {
@@ -135,42 +207,113 @@
     color: #f1f1f1;
   }
   
+  .cardTitle {
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+  }
+  
+  .cardText {
+    font-size: 0.9rem;
+    font-weight: bold;
+    line-height: 1.5;
+    color: var(--text-color);
+    padding-bottom: 2rem;
+  }
   .cardBack ul {
     list-style-type: disc;
-    padding-left: 20px;
+    padding-left: 0.7rem;
   }
   
   .cardList {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2rem 2rem;
+    gap: 1rem;
     align-items: center;
-    /* gap: 1rem; */
-    font-size: 0.75rem;
   }
   
-  .cardTitle {
-    font-size: 1.5rem;
-    /* padding: 1rem; */
-  }
-  
-  .cardText {
-    font-size: 1rem;
-    font-weight: bold;
-    line-height: 1.5;
-    /* padding: .7rem; */
-    color: var(--text-color);
-    /* margin: 0; */
-  }
   
   .cardListItem{
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
+  .card {
+    width: 80%;
+    perspective: 1000px;
+  }
   
+  .cardInner {
+    position: relative;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    min-height: 350px;
+    min-width: 150px;
+    justify-content: center;
+  }
+  
+  .card:hover .cardInner {
+    transform: rotateY(180deg);
+  }
+  
+  .cardFront,
+  .cardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    border-radius: 20px;
+    box-shadow: 5px 12px 15px rgba(0, 0, 0, 0.3);
+    padding: 1.5rem 1.5rem;
+    text-align: left;
+  }
+  
+  .cardFront {
+    background-color: var(--background-color);
+    color: #333;
+  }
+  
+  .cardBack {
+    background-color: #333;
+    border-color: var(--primary);
+    transform: rotateY(180deg);
+    color: #f1f1f1;
+  }
+  
+  .cardTitle {
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+  }
+  
+  .cardText {
+    font-size: 0.9rem;
+    font-weight: bold;
+    line-height: 1.5;
+    color: var(--text-color);
+    padding-bottom: 2rem;
+  }
+  .cardBack ul {
+    list-style-type: disc;
+    padding-left: 0.7rem;
+  }
+  
+  .cardList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  
+  .cardListItem{
+    font-size: 0.6rem;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
