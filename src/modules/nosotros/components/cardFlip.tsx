@@ -16,7 +16,6 @@ const CardFlip: React.FC<CardFlipProps> = ({ title, description, bulletPoints })
                     <p className={styles.cardText}>{description}</p>
                 </div>
                 <div className={styles.cardBack}>
-                    
                     <ul className={styles.cardList}>
                         {bulletPoints.map((point, index) => (
                             <li className={styles.cardListItem} key={index}>{point}</li>
