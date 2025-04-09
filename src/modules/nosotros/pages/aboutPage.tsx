@@ -49,11 +49,9 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </Section>
-      <Section>
-        <div className={pageStyle.clientsContainer}>
+      <div className={pageStyle.clientsContainer}>
           <ClientCarousel settings={clientSettings}/>
-        </div>
-      </Section>
+      </div>
     </PageWrapper>
   );
 };
