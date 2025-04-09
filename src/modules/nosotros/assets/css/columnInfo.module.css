@@ -1,71 +1,197 @@
-  /* .column {
-    flex: 1 1 20%;
-    text-align: center;
-    padding: 10px;
-    border-radius: 8px;
-    box-sizing: border-box; 
-    max-width: 300px; 
-    font-family: Manrope;
-  }
-  
-  .columnImage {
-    width: 100%;
-    height: auto;
-    max-width: 150px;
-    margin-bottom: 15px;
-  }
-  
-  .columnTitle {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: rgba(198,40,40,1);
-  }
-  
-  .column-paragraph {
-    font-size: 1em;
-    color: #555;
-  } */
+.column {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 8px; */
+  box-sizing: border-box; 
+  width: 18%;
+  padding: 0.5rem 0.5rem;
+  height: 300px;
+}
+
+.columnImage {
+  width: 50%;
+  height: auto;
+  padding-bottom: 0.5rem;
+}
+
+.columnTitle {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.columnParagraph {
+  font-size: 0.9rem;
+  /* color: #555; */
+  color: var(--secondary);
+  width: 100%
+}
 
 @media (max-width: 576px){
   .column {
-    /* flex: 1 1 20%; */
+    display: flex;
+    flex-direction: column;
     text-align: center;
     justify-content: center;
     align-items: center;
-    /* padding: 10px; */
-    border-radius: 8px;
+    /* border-radius: 8px; */
     box-sizing: border-box; 
-    width: 200px; 
+    width: 100%;
     padding: 0.7rem 0.7rem;
   }
   
   .columnImage {
-    width: 70%;
+    width: 50%;
     height: auto;
-    /* max-width: 150px; */
-    /* margin-bottom: 15px; */
+    padding-bottom: 0.5rem;
   }
   
   .columnTitle {
-    font-size: 1.2em;
+    font-size: 1.3rem;
     margin-bottom: 10px;
-    color: rgba(198,40,40,1);
+    color: var(--primary);
   }
   
   .columnParagraph {
-    font-size: 0.7em;
-    color: #555;
+    font-size: 0.9rem;
+    /* color: #555; */
+    color: var(--secondary);
+    width: 80%;
   }
 }
 
 @media (min-width: 576px) and (max-width: 768px){
+  .column {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 8px; */
+    box-sizing: border-box; 
+    width: 100%;
+    padding: 0.9rem 0.9rem;
+  }
+  
+  .columnImage {
+    width: 40%;
+    height: auto;
+    padding-bottom: 0.5rem;
+  }
+  
+  .columnTitle {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--primary);
+  }
+  
+  .columnParagraph {
+    font-size: 0.9rem;
+    /* color: #555; */
+    color: var(--secondary);
+    width: 80%
+  }
+} 
 
+@media (min-width: 768px) and (max-width: 992px){
+  .column {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 8px; */
+    box-sizing: border-box; 
+    width: 40%;
+    padding: 1rem 1rem;
+  }
+  
+  .columnImage {
+    width: 50%;
+    height: auto;
+    padding-bottom: 0.5rem;
+  }
+  
+  .columnTitle {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--primary);
+  }
+  
+  .columnParagraph {
+    font-size: 1rem;
+    /* color: #555; */
+    color: var(--secondary);
+    width: 100%
+  }
 } 
 
 @media (min-width: 992px) and (max-width: 1200px){
-
+  .column {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 8px; */
+    box-sizing: border-box; 
+    width: 40%;
+    padding: 1rem 1rem;
+  }
+  
+  .columnImage {
+    width: 50%;
+    height: auto;
+    padding-bottom: 0.5rem;
+  }
+  
+  .columnTitle {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--primary);
+  }
+  
+  .columnParagraph {
+    font-size: 1rem;
+    /* color: #555; */
+    color: var(--secondary);
+    width: 100%
+  }
 } 
 
 @media (min-width: 1200px){
-
+  .column {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 8px; */
+    box-sizing: border-box; 
+    width: 18%;
+    padding: 0.5rem 0.5rem;
+    height: 300px;
+  }
+  
+  .columnImage {
+    width: 50%;
+    height: auto;
+    padding-bottom: 0.5rem;
+  }
+  
+  .columnTitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--primary);
+  }
+  
+  .columnParagraph {
+    font-size: 0.9rem;
+    /* color: #555; */
+    color: var(--secondary);
+    width: 100%
+  }
 } 

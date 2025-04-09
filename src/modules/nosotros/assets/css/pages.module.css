@@ -5,14 +5,16 @@
   font-weight: 700;
 }
 
-/* .columnInfoContainer {
+.columnInfoContainer {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  justify-content: center;
   align-items: center;
-  width: 100%;
-  padding: 2rem 0;
-} */
-
+  width: 90%;
+  margin-top: 1.4rem;
+  gap: 1rem;
+}
 .redTitle {
   color: var(--primary);
   font-size: 2.3rem;
@@ -140,11 +142,13 @@
   
   .columnInfoContainer {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     width: 80%;
     margin-top: 1.4rem;
+    gap: 2.5rem;
   }
   
   .clientsContainer{
@@ -203,6 +207,17 @@
     margin: .5rem 0;
     padding: .7rem 0;
   }
+
+  .columnInfoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-top: 1.4rem;
+    gap: 2.5rem;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -237,6 +252,17 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+  }
+  
+  .columnInfoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-top: 1.4rem;
+    gap: 1.5rem;
   }
   
   .clientsContainer{
@@ -285,6 +311,17 @@
     width: 100%;
   }
   
+  .columnInfoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-top: 1.4rem;
+    gap: 1.5rem;
+  }
+
   .clientsContainer{
     display: flex;
     flex-direction: column;
@@ -331,6 +368,17 @@
     width: 100%;
   }
   
+  .columnInfoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-top: 1.4rem;
+    gap: 1rem;
+  }
+
   .clientsContainer{
     display: flex;
     flex-direction: column;
