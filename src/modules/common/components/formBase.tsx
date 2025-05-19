@@ -13,7 +13,9 @@ const FormBase: React.FC<FormBaseProps> = ({
   onValidate,
 }) => {
   const [submitSuccess, setSubmitSuccess] = useState<boolean>(false);
-  const [fieldValidity, setFieldValidity] = useState<Record<string, boolean>>({});
+  const [fieldValidity, setFieldValidity] = useState<Record<string, boolean>>(
+    {}
+  );
   const formRef = useRef<HTMLFormElement>(null);
 
   const resetForm = () => {
@@ -42,7 +44,7 @@ const FormBase: React.FC<FormBaseProps> = ({
 
   const handleFormSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    
+
     const isFormValid = React.Children.toArray(children)
       .filter(
         (child) =>
@@ -53,9 +55,9 @@ const FormBase: React.FC<FormBaseProps> = ({
           React.isValidElement<InputBaseProps>(child) &&
           fieldValidity[child.props.name] === true
       );
-    
+
     const isTermsAccepted = fieldValidity["terms"] === true;
-    
+
     if (onValidate) {
       onValidate("submit", isFormValid && isTermsAccepted);
     }
@@ -68,7 +70,7 @@ const FormBase: React.FC<FormBaseProps> = ({
       const formData = new FormData(e.target as HTMLFormElement);
       const data = Object.fromEntries(formData.entries());
       const dataWithTerms: {
-        [key: string]: any;
+        [key: string]: unknown;
         terms: boolean;
       } = { ...data, terms: isTermsAccepted };
 
@@ -91,7 +93,12 @@ const FormBase: React.FC<FormBaseProps> = ({
         {textContent && <p className={formStyles.formText}>{textContent}</p>}
       </div>
 
-      <form ref={formRef} className={formStyles.form} onSubmit={handleFormSubmit} noValidate>
+      <form
+        ref={formRef}
+        className={formStyles.form}
+        onSubmit={handleFormSubmit}
+        noValidate
+      >
         {React.Children.map(children, (child) => {
           if (React.isValidElement<InputBaseProps>(child)) {
             return React.cloneElement(child, {
