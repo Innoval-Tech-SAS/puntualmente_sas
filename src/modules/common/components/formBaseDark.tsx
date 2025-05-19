@@ -47,8 +47,6 @@ const FormBase: React.FC<FormBaseProps> = ({
     }, 3000);
   };
 
-
-
   const handleFormSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setSubmitError(null);
@@ -84,7 +82,7 @@ const FormBase: React.FC<FormBaseProps> = ({
       const formData = new FormData(e.target as HTMLFormElement);
       const data = Object.fromEntries(formData.entries());
       const dataWithTerms: {
-        [key: string]: any;
+        [key: string]: unknown;
         amount?: string | number;
         terms: boolean;
       } = { ...data, terms: isTermsAccepted };
@@ -94,13 +92,16 @@ const FormBase: React.FC<FormBaseProps> = ({
       }
 
       const response = await controller.create("/payments", dataWithTerms);
-      console.log(submitSuccess)
+      console.log(response);
+      console.log(submitSuccess);
       if (response.id) {
         resetForm();
         if (onSubmitSuccess) {
           onSubmitSuccess();
         }
-        window.open("https://portalpagos.davivienda.com/#/comercio/10924/PUNTUALMENTE");
+        window.open(
+          "https://portalpagos.davivienda.com/#/comercio/10924/PUNTUALMENTE"
+        );
         showResponse(
           "Éxito",
           "En breve serás redireccionado al portal de pagos"
@@ -155,10 +156,8 @@ const FormBase: React.FC<FormBaseProps> = ({
         <Input
           type="checkbox"
           name="terms"
-          label={
-            `De acuerdo con la Ley 1581 de 2012 sobre Protección de Datos Personales, autorizo el tratamiento de mis datos conforme a la política de privacidad.
-            Al proporcionar mi información, acepto los términos y condiciones establecidos para su uso y almacenamiento`
-          }
+          label={`De acuerdo con la Ley 1581 de 2012 sobre Protección de Datos Personales, autorizo el tratamiento de mis datos conforme a la política de privacidad.
+            Al proporcionar mi información, acepto los términos y condiciones establecidos para su uso y almacenamiento`}
           required={true}
           dataType="terms"
         />
