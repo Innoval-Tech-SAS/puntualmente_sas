@@ -1,54 +1,36 @@
-# React + TypeScript + Vite
+# Puntualmente S.A.S. – Sitio web corporativo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio web corporativo de Puntualmente S.A.S. con secciones de inicio, nosotros, servicios, contacto y políticas, carruseles de clientes y servicios, formularios de contacto y de pago, visor de documentos PDF y botón de WhatsApp.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React 19 · TypeScript · Vite (SWC) · HeroUI · Tailwind CSS 4 · Framer Motion · React Router 7 · ESLint
 
-## Expanding the ESLint configuration
+## Estructura
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Organizado por módulos, uno por sección del sitio:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+| Carpeta | Contenido |
+| --- | --- |
+| `src/modules/common` | Componentes compartidos (navbar, footer, formularios, carruseles) y estilos CSS Modules |
+| `src/modules/inicio` | Página de inicio |
+| `src/modules/nosotros` | Quiénes somos |
+| `src/modules/servicios` | Servicios |
+| `src/modules/contacto` | Contacto |
+| `src/modules/policies` | Políticas y tratamiento de datos |
+| `src/config` | Configuración del sitio |
+
+## Cómo correrlo
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Build de producción:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm run build
 ```
+
+La URL de la API se define en `.env.development` / `.env.production` con `VITE_API_BASE_URL`.
